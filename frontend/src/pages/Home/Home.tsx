@@ -14,7 +14,17 @@ const Home: FC<HomeProps> = ({ isDark = false }) => {
             <HomeHeader />
             <HomeAbout
                 title="Disfruta en TV"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus ipsam maxime atque exercitationem natus ducimus minima ipsa doloremque quas! Hic porro voluptate assumenda obcaecati ad in magnam maiores dolor."
+                description="Lorem ipsum dolor sit amet consectetur adipisicing elit Ut et massa mi. Aliquam in hendrerit."
+                thumbnail="https://cdn.pixabay.com/photo/2024/04/19/04/39/kingfisher-8705377_1280.jpg"
+            />
+            <HomeAbout
+                title="Disfruta en TV"
+                description="Lorem ipsum dolor sit amet consectetur adipisicing elit Ut et massa mi. Aliquam in hendrerit."
+                thumbnail="https://cdn.pixabay.com/photo/2024/04/19/04/39/kingfisher-8705377_1280.jpg"
+            />
+            <HomeAbout
+                title="Disfruta en TV"
+                description="Lorem ipsum dolor sit amet consectetur adipisicing elit Ut et massa mi. Aliquam in hendrerit."
                 thumbnail="https://cdn.pixabay.com/photo/2024/04/19/04/39/kingfisher-8705377_1280.jpg"
             />
         </Fragment>

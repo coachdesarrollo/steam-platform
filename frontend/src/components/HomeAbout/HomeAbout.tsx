@@ -3,13 +3,13 @@ import { HomeAboutProps } from "./propTypes";
 const HomeAbout: React.FC<HomeAboutProps> = ({ title, description, thumbnail }) => {
 	// return <section {...props}>{children}</section>;
 	return (
-		<article className="grid grid-cols-2">
-			<section className="text-white  flex flex-col justify-center align-middle">
-				<h2>{title}</h2>
-				<p>{description}</p>
+		<article className="grid grid-cols-1 text-center px-12 lg:px-18 xl:px-18 py-16 lg:grid-cols-2 lg:text-left border-y-4 gap-x-0 lg:gap-x-10 gap-y-16 border-y-zinc-800">
+			<section className="flex flex-col justify-center text-white">
+				<h2 className="text-3xl lg:text-5xl 2xl:text-6xl font-bold mb-3">{title}</h2>
+				<p className="text-lg/5 lg:text-2xl 2xl:text-3xl">{description}</p>
 			</section>
-			<section className="p-10">
-				<img className="rounded-lg shadow-md" src={thumbnail} alt={title} />
+			<section className="text-center lg:text-right">
+				<img className="inline-block w-10/12 md:w-full shadow-md" src={thumbnail} alt={title} />
 			</section>
 		</article>
 	);
