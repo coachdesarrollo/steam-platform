@@ -1,4 +1,4 @@
-import { HomeAboutProps } from "./propTypes";
+import { type HomeAboutProps } from "./propTypes";
 
 const HomeAbout: React.FC<HomeAboutProps> = ({ title, description, thumbnail, reverse = false }) => { // return <section {...props}>{children}</section>;
 	/*return (
