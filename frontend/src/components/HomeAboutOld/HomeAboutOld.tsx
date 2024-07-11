@@ -1,6 +1,6 @@
 import { type HomeAboutProps } from "./propTypes";
 
-const HomeAbout: React.FC<HomeAboutProps> = ({ title, description, thumbnail, reverse = false }) => { // return <section {...props}>{children}</section>;
+const HomeAboutOld: React.FC<HomeAboutProps> = ({ title, description, thumbnail, reverse = false }) => { // return <section {...props}>{children}</section>;
 	/*return (
 		<article className="grid grid-cols-1 text-center px-12 lg:px-18 xl:px-18 py-16 lg:grid-cols-2 lg:text-left border-y-4 gap-x-0 lg:gap-x-10 gap-y-16 border-y-zinc-800">
 			<section className="flex flex-col justify-center text-white">
@@ -35,4 +35,4 @@ HomeAbout.Content = Title;
 HomeAbout.Thumbnail = Thumbnail;
 */
 
-export default HomeAbout;
+export default HomeAboutOld;
