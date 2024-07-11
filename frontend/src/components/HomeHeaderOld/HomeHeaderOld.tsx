@@ -1,5 +1,5 @@
 import { BannerHeroOld } from "../BannerHeroOld";
-import { LandingNavbar } from "../LandingNavbar";
+import { LandingNavbar } from "../HomeNavbar";
 
 const HomeHeaderOld: React.FC = () => {
 	return (

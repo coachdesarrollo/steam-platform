@@ -1,9 +1,9 @@
 import { ButtonSize, ButtonStyle } from "../../config/themes/button";
 import { Button } from "../Button";
 
-const BannerHero: React.FC = () => {
+const HomeJumbotron: React.FC = () => {
     return (
-        <div className="flex flex-col justify-end items-center text-center text-white px-8 pb-20 h-full">
+        <article className="flex flex-col justify-end items-center text-center text-white px-8 pb-20 h-full">
             <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">
                 Cursos y recursos educativos variados para todos
             </h1>
@@ -17,8 +17,8 @@ const BannerHero: React.FC = () => {
             <Button variant={ButtonStyle.Outline} size={ButtonSize.Large} isLink={true}>
                 Registrarme
             </Button>
-        </div>
+        </article>
     );
 };
 
-export default BannerHero;
+export default HomeJumbotron;
