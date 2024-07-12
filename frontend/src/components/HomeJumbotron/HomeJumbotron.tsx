@@ -11,7 +11,7 @@ const HomeJumbotron: React.FC = () => {
                 Disfruta donde quieras. Cancela cuando quieras
             </p>
             <p className="text-lg sm:text-2xl mb-10">
-                ¿Quieres empezar a aprender? Registrate con tu email para crear una cuenta e iniciar <br />
+                ¿Quieres empezar a aprender? Regístrate con tu email para crear una cuenta e iniciar <br />
                 tu membresía de <b>STEAM</b>.
             </p>
             <Button variant={ButtonStyle.Outline} size={ButtonSize.Large} isLink={true}>

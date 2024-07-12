@@ -1,6 +1,7 @@
 details {
   transition: all 1s ease;
   max-height: 4rem;
+  cursor: pointer;
 }
 
 details[open] {
