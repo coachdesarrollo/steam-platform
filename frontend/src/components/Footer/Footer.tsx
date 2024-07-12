@@ -1,8 +1,10 @@
-const Footer: React.FC  = () => {
+import Faq from "../Faq/Faq";
+
+const Footer: React.FC = () => {
 	return (
 		<div>
- 			Footer works!
- 		</div>
+			<Faq />
+		</div>
 	);
 };
 

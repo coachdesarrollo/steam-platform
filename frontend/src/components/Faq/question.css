@@ -1,0 +1,25 @@
+details {
+  transition: all 1s ease;
+  max-height: 4rem;
+}
+
+details[open] {
+  max-height: 100vh;
+}
+
+summary{ 
+  margin-bottom: 0;
+  transition:all .5s ease-in-out;
+}
+
+details[open] summary {
+  margin-bottom: 12px;
+}
+
+details summary span {
+  transition: all 200ms ease-in;
+}
+
+details[open] summary > span {
+  transform: rotate(45deg);
+}
