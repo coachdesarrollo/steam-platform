@@ -1,6 +1,6 @@
 import { FC } from "react";
 import "./question.css";
-import PlusIcon from "../PlusIcon/PlusIcon";
+import { PlusIcon } from "../icons/PlusIcon";
 
 export type Question = {
   question: string;

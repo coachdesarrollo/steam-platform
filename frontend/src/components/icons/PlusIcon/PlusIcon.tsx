@@ -1,10 +1,7 @@
 import { FC } from "react";
+import type { PlusIconProps } from "./propTypes";
 
-export type IconProps = {
-  className?: string;
-};
-
-const PlusIcon: FC<IconProps> = ({ className }) => {
+const PlusIcon: FC<PlusIconProps> = ({ className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
