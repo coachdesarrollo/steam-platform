@@ -1,10 +1,14 @@
-import { MobileIcon } from "../Icons";
+import { MobileIcon } from "../icons/MobileIcon";
 
 import Faq from "../Faq/Faq";
 
 const Footer: React.FC = () => {
 	return (
+    
 		<footer className="bg-gray-500 text-center text-surface/75 dark:bg-[#070707] dark:text-gray-400 lg:text-left">
+      <div>
+			  <Faq />
+		  </div>
  			 
       <div //Footer title container
         className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-white/10 lg:justify-between">
@@ -96,7 +100,7 @@ const Footer: React.FC = () => {
               <a href="https://www.steamacademy.com.co/" target="_blank"> Sobre STEAM </a>
             </p>
             <p className="mb-4 hover:dark:text-gray-200">
-              <a href="https://www.steamacademy.com.co/fundacionstem" target="_blank"> Funcación STEAM </a>
+              <a href="https://www.steamacademy.com.co/fundacionstem" target="_blank"> Fundación STEAM </a>
             </p>
             <p className="mb-4 hover:dark:text-gray-200">
               <a href="https://www.steamacademy.com.co/" target="_blank"> STEAM para empresas </a>
@@ -127,7 +131,7 @@ const Footer: React.FC = () => {
           >
             <h6
               className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-              Infomación
+              Información
             </h6>
             <p className="mb-4 hover:dark:text-gray-200">
               <a href="#!">Tarjetas de regalo</a>
@@ -136,7 +140,7 @@ const Footer: React.FC = () => {
               <a href="#!">Términos de uso</a>
             </p>
             <p className="mb-4 hover:dark:text-gray-200">
-              <a href="#!">Informacón corporativa</a>
+              <a href="#!">Información corporativa</a>
             </p>
             <p className="mb-4 hover:dark:text-gray-200">
               <a href="#!">Prensa</a>
@@ -165,7 +169,7 @@ const Footer: React.FC = () => {
                     d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
                 </svg>
               </span>
-              Cra. 46 #74-16, Piso 2 local 12 <br /> Nte. Centro Historico, Barranquilla, Atlántico, Colombia
+              Cra. 46 #74-16, Piso 2 local 12 <br /> Nte. Centro Histórico, Barranquilla, Atlántico, Colombia
             </a>
             <a href="#!" className="mb-4 flex items-center justify-center md:justify-start hover:dark:text-gray-200">
               <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">
@@ -215,11 +219,10 @@ const Footer: React.FC = () => {
           > STEAM ACADEMY 
         </a>
       </div>
+      
 
  		</footer>
-		<div>
-			<Faq />
-		</div>
+		
 	);
 };
 
