@@ -7,13 +7,12 @@ details[open] {
   max-height: 100vh;
 }
 
-summary{ 
-  margin-bottom: 0;
-  transition:all .5s ease-in-out;
+summary {
+  transition: all 0.5s ease-in-out;
 }
 
 details[open] summary {
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 
 details summary span {
