@@ -8,7 +8,7 @@ interface Advertisement {
     title: string;
     description: string;
     thumbnail: string;
-    reverse : boolean; 
+    reverse: boolean; 
 }
 
 const assignId: getNumericId = autoIncrementIdGenerator();
