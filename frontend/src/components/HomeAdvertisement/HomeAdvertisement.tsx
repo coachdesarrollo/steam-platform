@@ -1,4 +1,5 @@
 import { type HomeAdvertisementProps } from "./propTypes";
+import styles from "./style.module.css";
 
 const HomeAdvertisement: React.FC<HomeAdvertisementProps> = ({
 	title,
