@@ -1,4 +1,4 @@
-import { ArrowIcon } from "../ArrowIcon";
+// import { ArrowIcon } from "../ArrowIcon";
 import { EnvolveIcon } from "../EnvolveIcon";
 
 const BannerHero: React.FC = () => {
