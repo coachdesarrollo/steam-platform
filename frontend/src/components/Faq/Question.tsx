@@ -1,6 +1,6 @@
 import { FC } from "react";
 import "./question.css";
-import { PlusIcon } from "../icons/PlusIcon";
+// import { PlusIcon } from "../icons/PlusIcon";
 
 export type Question = {
   question: string;
@@ -14,7 +14,7 @@ const Question: FC<Question> = ({ answer, question }) => {
         <h2 className="text-xl font-semibold cursor-pointer text-[clamp(1rem,4vw,1.5rem)]">
           {question}
         </h2>
-        <span>{<PlusIcon />}</span>
+        <span>{/* {<PlusIcon />} */}ICONO</span>
       </summary>
       <div className="bg-[#2D2D2D] p-4 text-[clamp(1rem,3vw,1.2rem)]">
         {answer}

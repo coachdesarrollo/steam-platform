@@ -1,11 +1,11 @@
-import { getNumericId, autoIncrementIdGenerator } from "../utils/generator";
+import { getUUID, getNumericId, autoIncrementIdGenerator } from "../utils/generator";
 
 interface Advertisement {
     id: number;
     title: string;
     description: string;
     thumbnail: string;
-    reverse: boolean; 
+    reverse: boolean;
 }
 
 const assignId: getNumericId = autoIncrementIdGenerator();
@@ -31,5 +31,34 @@ export const advertisements: Array<Advertisement> = [
         description: "Películas y series ilimitadas en tu teléfono, tablet, laptop y TV.",
         thumbnail: "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png",
         reverse: false
+    }
+];
+
+interface Faq {
+  id: string;
+  question: string;
+  answer: string;
+}
+
+export const faq: Array<Faq> = [
+    {
+        id: getUUID(),
+        question: "¿Lorem ipsum dolor?",
+        answer: "Lorem ipsum"
+    },
+    {
+        id: getUUID(),
+        question: "¿Lorem ipsum dolor?",
+        answer: "Lorem ipsum"
+    },
+    {
+        id: getUUID(),
+        question: "¿Lorem ipsum dolor?",
+        answer: "Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum"
+    },
+    {
+      id: getUUID(),
+      question: "¿Lorem ipsum dolor?",
+      answer: "Lorem ipsum"
     }
 ];
