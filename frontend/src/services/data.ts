@@ -16,14 +16,14 @@ export const advertisements: Array<Advertisement> = [
         title: "Disfruta en TV",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit Ut et massa mi. Aliquam in hendrerit.",
         thumbnail: "https://cdn.pixabay.com/photo/2024/04/19/04/39/kingfisher-8705377_1280.jpg",
-        reverse: false,
+        reverse: false
     },
     {
         id: assignId(),
         title: "Descarga tus series para verlas offline",
         description: "Guarda tu contenido favorito y tendrás siempre algo para ver.",
         thumbnail: "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg",
-        reverse: true,
+        reverse: true
     },
     {
         id: assignId(),
