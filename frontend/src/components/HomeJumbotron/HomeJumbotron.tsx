@@ -3,7 +3,9 @@ import { Button } from "../Button";
 
 const HomeJumbotron: React.FC = () => {
   return (
-    <article className="flex flex-col justify-end items-center text-center text-white px-8 pb-20 h-full">
+    <article
+      className={`flex flex-col justify-end items-center text-center text-white px-8 pb-20 h-full [animation-range:exit_-200px]  [animation-timeline:view()] animate-fade-out`}
+    >
       <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">
         Cursos y recursos educativos variados para todos
       </h1>
