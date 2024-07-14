@@ -1,5 +1,4 @@
 import { type HomeAdvertisementProps } from "./propTypes";
-import styles from "./style.module.css";
 
 const HomeAdvertisement: React.FC<HomeAdvertisementProps> = ({
   title,
@@ -9,10 +8,8 @@ const HomeAdvertisement: React.FC<HomeAdvertisementProps> = ({
 }) => (
   <article className="grid grid-cols-1 text-center px-12 py-16 lg:grid-cols-2 lg:text-left border-y-4 gap-x-0 lg:gap-x-10 gap-y-16 border-y-zinc-800">
     <section
-      className={`text-center lg:text-right order-last ${
-        reverse
-          ? `lg:order-first ${styles["enter-left"]}`
-          : `${styles["enter-right"]}`
+      className={`text-center lg:text-right order-last animate-slide [animation-timeline:view()] [animation-range:cover_cover_500px] ${
+        reverse ? `lg:order-first -translate-x-full` : `translate-x-full`
       }`}
     >
       <img
@@ -22,10 +19,8 @@ const HomeAdvertisement: React.FC<HomeAdvertisementProps> = ({
       />
     </section>
     <section
-      className={`flex flex-col justify-center text-white ${
-        reverse
-          ? `lg:order-first ${styles["enter-right"]}`
-          : `${styles["enter-left"]}`
+      className={`flex flex-col justify-center text-white animate-slide [animation-timeline:view()] [animation-range:cover_cover_500px] ${
+        reverse ? `lg:order-first translate-x-full` : `-translate-x-full`
       }`}
     >
       <h2 className="text-3xl lg:text-5xl/snug 2xl:text-6xl font-extrabold mb-3">

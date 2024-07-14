@@ -9,16 +9,23 @@ export default {
       animation: {
         scale: "scale linear forwards",
         "fade-out": "fade-out linear",
+        slide: "slide linear forwards",
       },
       keyframes: {
         scale: {
           "25%": { opacity: 1 },
-          "85%, 100%": { opacity: 0, transform: "scale(1.4)" },
+          "85%, 100%": { opacity: 0, transform: "scale(1.5)" },
         },
         "fade-out": {
           "100%": {
             opacity: 0,
             transform: "scale(0.5)",
+          },
+        },
+        slide: {
+          "100%": {
+            transform: "translate(0)",
+            opacity: 1,
           },
         },
       },
