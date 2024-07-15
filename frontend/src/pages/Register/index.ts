@@ -1,2 +1,1 @@
-export { AccessCredentials } from "./AccessCredentials";
-export { PersonalData } from "./PersonalData";
+export { default as Register } from "./Register";
