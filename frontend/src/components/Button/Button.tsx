@@ -15,6 +15,7 @@ const Button: FC<ButtonProps> = ({
   children,
   onClick,
   isLink = false,
+  className,
 }) => {
   const buttonFeatures = THEMES[theme][variant];
   const buttonClassNames = getButtonAppearance(buttonFeatures, size);
@@ -23,7 +24,7 @@ const Button: FC<ButtonProps> = ({
       ? { type: "a", attribute: "role" }
       : { type: "button", attribute: "type" };
   const props = {
-    className: buttonClassNames,
+    className: `${buttonClassNames} ${className}`,
     [element.attribute]: "button",
     onClick,
   };
