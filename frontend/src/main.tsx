@@ -3,13 +3,7 @@ import ReactDOM from "react-dom/client";
 
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import {
-  Home,
-  Login,
-  PersonalData,
-  AccessCredentials,
-  Subcription,
-} from "./pages/index.ts";
+import { Home, Login, Register, Subcription } from "./pages/index.ts";
 
 const router = createBrowserRouter([
   {
@@ -22,16 +16,7 @@ const router = createBrowserRouter([
   },
   {
     path: "register",
-    children: [
-      {
-        path: "personal-data",
-        element: <PersonalData />,
-      },
-      {
-        path: "access-credentials",
-        element: <AccessCredentials />,
-      },
-    ],
+    element: <Register />,
   },
   {
     path: "subcription",
