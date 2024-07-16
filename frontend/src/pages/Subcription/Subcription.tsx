@@ -83,11 +83,11 @@ const Subcription: FC<SubcriptionProps> = () => {
   const navigate = useNavigate();
 
   return (
-    <main className="px-32 py-16 max-lg:px-12 text-white grid gap-44">
-      <header className=" grid gap-12">
+    <main className="py-16 max-lg:px-12 text-white grid gap-0">
+      <header className=" grid gap-12 mb-16">
         <h2 className="text-5xl font-bold text-center">Seleccionar Plan</h2>
 
-        <section className="flex flex-wrap gap-4">
+        <section className="flex flex-wrap gap-4 px-32">
           {subcriptions.map((subcription) => (
             <article
               className={`bg-[#1D1D1D] flex flex-col gap-3 p-4 rounded-md cursor-pointer hover:scale-105 transition-transform border-transparent border-2 hover:border-2 hover:border-white flex-1 basis-[300px] relative group`}
@@ -128,7 +128,7 @@ const Subcription: FC<SubcriptionProps> = () => {
           ))}
         </section>
 
-        <p className="text-center text-lg">
+        <p className="text-center text-lg px-32 text-[#C8C8C8]">
           Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
           Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
           mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
@@ -146,7 +146,7 @@ const Subcription: FC<SubcriptionProps> = () => {
         </Button>
       </header>
 
-      <section className="grid gap-16">
+      <section className="grid gap-16 w-full py-32 bg-[#0E0E0E] border-y border-[#333333]">
         <hgroup className="grid gap-6">
           <h2 className="text-5xl font-bold text-center">
             Alcanza tus objetivos
@@ -170,12 +170,12 @@ const Subcription: FC<SubcriptionProps> = () => {
         </article>
       </section>
 
-      <section className="grid gap-14 place-content-center relative z-20 p-8">
-        <div className="absolute bottom-0 right-0 -z-10">
-          <img src={giftBox} alt="gift box party" className="w-60" />
+      <section className="grid gap-14 place-content-center relative z-20 p-8 w-full py-32 border-y border-[#333333]">
+        <div className="absolute bottom-0 right-0 -z-20">
+          <img src={giftBox} alt="gift box party" className="w-70" />
         </div>
-        <div className="absolute top-10 left-4 -z-10">
-          <img src={giftBox2} alt="gift box party" className="w-80" />
+        <div className="absolute top-0 left-4 -z-10">
+          <img src={giftBox2} alt="gift box party" className="w-96" />
         </div>
         <hgroup className="grid gap-6 text-center text-pretty">
           <h2 className="text-5xl font-bold">
@@ -198,8 +198,11 @@ const Subcription: FC<SubcriptionProps> = () => {
           </button>
         </div>
       </section>
+      <section className="w-full py-32 bg-[#0E0E0E] border-y border-[#333333]">
+        <Faq />
+      </section>
 
-      <Faq />
+      
     </main>
   );
 };
