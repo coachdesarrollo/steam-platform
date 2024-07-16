@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Question from "./Question";
-import { faq } from "../../services/data";
+import { faq } from "@/services/data";
 
 const Faq: FC = () => {
   return (
@@ -8,7 +8,7 @@ const Faq: FC = () => {
       <h2 className="font-bold text-white text-5xl text-center">
         Preguntas Frecuentes
       </h2>
-      <section className="grid gap-2 ">
+      <section className="grid gap-2">
         {faq.map(({ question, answer, id }) => (
           <Question answer={answer} question={question} key={id} />
         ))}
