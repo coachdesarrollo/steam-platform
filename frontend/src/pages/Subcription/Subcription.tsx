@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { SubcriptionProps } from "./propTypes";
-import { CheckIcon } from "../../components/icons/CheckIcon";
 import { Button } from "../../components/Button";
 import { ButtonSize, ButtonTheme } from "../../config/themes/button";
 import giftBox from "../../assets/gift-box-party.png";
@@ -9,6 +8,7 @@ import Faq from "../../components/Faq/Faq";
 import planDuo from "../../assets/plan-duo.png";
 import planMono from "../../assets/plan-mono.png";
 import planFamiliar from "../../assets/plan-familiar.png";
+import { CheckIcon } from "../../components/Icons/CheckIcon";
 
 const subcriptions = [
   {

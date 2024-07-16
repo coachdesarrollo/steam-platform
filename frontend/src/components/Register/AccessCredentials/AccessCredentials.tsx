@@ -5,7 +5,7 @@ import {
   ButtonStyle,
   ButtonTheme,
 } from "../../../config/themes/button";
-import { UserIcon } from "../../icons";
+import { UserIcon } from "../../Icons";
 
 const AccessCredentials: FC = () => {
   return (
