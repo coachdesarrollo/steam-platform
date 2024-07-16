@@ -9,6 +9,7 @@ import planDuo from "../../assets/plan-duo.png";
 import planMono from "../../assets/plan-mono.png";
 import planFamiliar from "../../assets/plan-familiar.png";
 import { CheckIcon } from "../../components/Icons/CheckIcon";
+import { Link, useNavigate } from "react-router-dom";
 
 const subcriptions = [
   {
@@ -79,6 +80,8 @@ const goals = [
 ];
 
 const Subcription: FC<SubcriptionProps> = () => {
+  const navigate = useNavigate();
+
   return (
     <main className="px-32 py-16 max-lg:px-12 text-white grid gap-44">
       <header className=" grid gap-12">
@@ -136,6 +139,7 @@ const Subcription: FC<SubcriptionProps> = () => {
         <Button
           theme={ButtonTheme.Gold}
           size={ButtonSize.Medium}
+          onClick={() => navigate("/register")}
           className="w-max justify-self-center"
         >
           Registrarme ahora
