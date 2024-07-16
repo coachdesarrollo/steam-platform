@@ -1,93 +1,23 @@
 import { FC } from "react";
 import { SubcriptionProps } from "./propTypes";
-import { Button } from "../../components/Button";
-import { ButtonSize, ButtonTheme } from "../../config/themes/button";
-import giftBox from "../../assets/gift-box-party.png";
-import giftBox2 from "../../assets/gift-box-party-2.png";
-import Faq from "../../components/Faq/Faq";
-import planDuo from "../../assets/plan-duo.png";
-import planMono from "../../assets/plan-mono.png";
-import planFamiliar from "../../assets/plan-familiar.png";
-import { CheckIcon } from "../../components/Icons/CheckIcon";
-import { Link, useNavigate } from "react-router-dom";
-
-const subcriptions = [
-  {
-    name: "Duo",
-    price: 78000,
-    icon: planDuo,
-    description:
-      "Disfruta de contenido ilimitado con otra persona. Comparte y accede a tus series y películas favoritas juntos, desde cualquier dispositivo.",
-    features: [
-      "Access to all features",
-      "1k lookups / per month",
-      "10 Monitoring Quota",
-      "30K API Credits / month",
-      "60 minutes Monitoring intervel",
-      "20% discount on backorders",
-    ],
-    morePopular: false,
-  },
-  {
-    name: "Mono",
-    price: 49000,
-    icon: planMono,
-    description:
-      "Disfruta de contenido ilimitado con otra persona. Comparte y accede a tus series y películas favoritas juntos, desde cualquier dispositivo.",
-    features: [
-      "Access to all features",
-      "1k lookups / per month",
-      "10 Monitoring Quota",
-      "30K API Credits / month",
-      "60 minutes Monitoring intervel",
-      "20% discount on backorders",
-    ],
-    morePopular: true,
-  },
-  {
-    name: "Familiar",
-    price: 99000,
-    icon: planFamiliar,
-    description:
-      "Disfruta de contenido premium con toda la familia. Este plan permite que hasta cuatro personas accedan simultáneamente a sus series y películas favoritas desde cualquier dispositivo.",
-    features: [
-      "Access to all features",
-      "1k lookups / per month",
-      "10 Monitoring Quota",
-      "30K API Credits / month",
-      "60 minutes Monitoring intervel",
-      "20% discount on backorders",
-    ],
-    morePopular: false,
-  },
-];
-
-const goals = [
-  {
-    statistics: "+100",
-    description:
-      "Cursos de Tecnología, Programación, Diseño, Marketing, Robotica...",
-  },
-  {
-    statistics: "+60",
-    description:
-      "Profesionales Dedicados están Aquí para Impulsar tu Éxito Educativo.",
-  },
-  {
-    statistics: "90%",
-    description: "De Nuestros Estudiantes Alcanzan sus Metas Educativas.",
-  },
-];
+import { Button } from "@/components/Button";
+import { ButtonSize, ButtonTheme } from "@/config/themes/button";
+import giftBox from "/assets/gift-box-party.png";
+import giftBox2 from "/assets/gift-box-party-2.png";
+import { CheckIcon } from "@/components/Icons/CheckIcon";
+import { useNavigate } from "react-router-dom";
+import { goals, subcriptions } from "@/services/data";
+import { Faq } from "@/components/Faq";
 
 const Subcription: FC<SubcriptionProps> = () => {
   const navigate = useNavigate();
 
   return (
     <main className="pt-16 text-white grid gap-0">
-      <header className=" grid gap-12 mb-16">
+      <header className=" grid gap-12 mb-16 bg-black py-16 lg:px-32 max-lg:px-12">
         <h2 className="text-5xl font-bold text-center">Seleccionar Plan</h2>
 
-        <section className="flex flex-wrap gap-4 px-32">
+        <section className="flex flex-wrap gap-4">
           {subcriptions.map((subcription) => (
             <article
               className={`bg-[#1D1D1D] flex flex-col gap-3 p-4 rounded-md cursor-pointer hover:scale-105 transition-transform border-transparent border-2 hover:border-2 hover:border-white flex-1 basis-[300px] relative group`}
@@ -146,7 +76,9 @@ const Subcription: FC<SubcriptionProps> = () => {
         </Button>
       </header>
 
-      <section className="grid gap-16 w-full py-32 bg-[#0E0E0E] border-y border-[#333333]">
+      <hr className="border-[#333333] border-2" />
+
+      <section className="grid gap-16 w-full py-32 lg:px-32 max-lg:px-12 bg-[#0E0E0E]">
         <hgroup className="grid gap-6">
           <h2 className="text-5xl font-bold text-center">
             Alcanza tus objetivos
@@ -179,7 +111,7 @@ const Subcription: FC<SubcriptionProps> = () => {
         </div>
         <hgroup className="grid gap-6 text-center text-pretty">
           <h2 className="text-5xl font-bold">
-            Regala un Año de Aprendizaje con Nuestros Planes
+            Regala un año de aprendizaje con nuestros planes
           </h2>
           <p className="w-[70%] justify-self-center text-xl">
             ¡Haz un regalo que inspire! Regala un año completo de acceso
@@ -202,7 +134,9 @@ const Subcription: FC<SubcriptionProps> = () => {
         <Faq/>
       </section>
 
-      
+      <hr className="border-[#333333] border-2" />
+
+      <Faq />
     </main>
   );
 };

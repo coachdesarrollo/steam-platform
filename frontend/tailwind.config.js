@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "banner-hero": "url('src/assets/banner-hero.png')",
+        "banner-hero": "url('/assets/banner-hero.png')",
       },
       animation: {
         scale: "scale linear forwards",

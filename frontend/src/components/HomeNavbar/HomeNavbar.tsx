@@ -1,7 +1,7 @@
-import logo from "../../assets/imagotiposteamwhite.png";
+import logo from "/assets/imagotiposteamwhite.png";
 
 import { Button } from "../Button";
-import { ButtonSize, ButtonStyle } from "../../config/themes/button";
+import { ButtonSize, ButtonStyle } from "@/config/themes/button";
 import { Link } from "react-router-dom";
 
 const LandingNavbar: React.FC = () => {
