@@ -1,20 +1,20 @@
 import { FC } from "react";
 import { SubcriptionProps } from "./propTypes";
-import { Button } from "../../components/Button";
-import { ButtonSize, ButtonTheme } from "../../config/themes/button";
-import giftBox from "../../assets/gift-box-party.png";
-import giftBox2 from "../../assets/gift-box-party-2.png";
-import { CheckIcon } from "../../components/Icons/CheckIcon";
+import { Button } from "@/components/Button";
+import { ButtonSize, ButtonTheme } from "@/config/themes/button";
+import giftBox from "/assets/gift-box-party.png";
+import giftBox2 from "/assets/gift-box-party-2.png";
+import { CheckIcon } from "@/components/Icons/CheckIcon";
 import { useNavigate } from "react-router-dom";
-import { goals, subcriptions } from "../../services/data";
-import Faq from "../../components/Faq/Faq";
+import { goals, subcriptions } from "@/services/data";
+import { Faq } from "@/components/Faq";
 
 const Subcription: FC<SubcriptionProps> = () => {
   const navigate = useNavigate();
 
   return (
-    <main className="max-lg:px-12 text-white grid">
-      <header className=" grid gap-12 bg-black py-16 lg:px-32 ">
+    <main className=" text-white grid">
+      <header className=" grid gap-12 bg-black py-16 lg:px-32 max-lg:px-12">
         <h2 className="text-5xl font-bold text-center">Seleccionar Plan</h2>
 
         <section className="flex flex-wrap gap-4">
@@ -78,7 +78,7 @@ const Subcription: FC<SubcriptionProps> = () => {
 
       <hr className="border-[#333333] border-2" />
 
-      <section className="grid gap-16 w-full py-32 bg-[#0E0E0E]">
+      <section className="grid gap-16 w-full py-32 lg:px-32 max-lg:px-12 bg-[#0E0E0E]">
         <hgroup className="grid gap-6">
           <h2 className="text-5xl font-bold text-center">
             Alcanza tus objetivos
@@ -113,7 +113,7 @@ const Subcription: FC<SubcriptionProps> = () => {
         </div>
         <hgroup className="grid gap-6 text-center text-pretty">
           <h2 className="text-5xl font-bold">
-            Regala un Año de Aprendizaje con Nuestros Planes
+            Regala un año de aprendizaje con nuestros planes
           </h2>
           <p className="w-[70%] justify-self-center text-xl">
             ¡Haz un regalo que inspire! Regala un año completo de acceso
@@ -135,9 +135,7 @@ const Subcription: FC<SubcriptionProps> = () => {
 
       <hr className="border-[#333333] border-2" />
 
-      <section className="w-full py-32 bg-[#0E0E0E] border-y border-[#333333]">
-        <Faq />
-      </section>
+      <Faq />
     </main>
   );
 };
