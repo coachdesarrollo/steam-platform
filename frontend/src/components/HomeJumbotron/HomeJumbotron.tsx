@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ButtonSize, ButtonStyle } from "../../config/themes/button";
 import { Button } from "../Button";
 
@@ -17,13 +18,15 @@ const HomeJumbotron: React.FC = () => {
         cuenta e iniciar <br />
         tu membresía de <b>STEAM</b>.
       </p>
-      <Button
-        variant={ButtonStyle.Standard}
-        size={ButtonSize.Large}
-        isLink={true}
-      >
-        Registrarme
-      </Button>
+      <Link to="subcription">
+        <Button
+          variant={ButtonStyle.Standard}
+          size={ButtonSize.Large}
+          isLink={true}
+        >
+          Registrarme
+        </Button>
+      </Link>
     </article>
   );
 };
