@@ -10,13 +10,13 @@ export type Question = {
 const Question: FC<Question> = ({ answer, question }) => {
   return (
     <details className="text-[#EBEBEB]">
-      <summary className="flex justify-between items-center bg-[#2D2D2D] p-4 hover:bg-">
+      <summary className="flex justify-between items-center bg-[#2D2D2D] p-4 hover:bg-[#424141] rounded-sm">
         <h2 className="text-xl font-semibold cursor-pointer text-[clamp(1rem,4vw,1.5rem)]">
           {question}
         </h2>
-        <span><PlusIcon /></span>
+        <span>{<PlusIcon/>}</span>
       </summary>
-      <div className="bg-[#2D2D2D] p-4 text-[clamp(1rem,3vw,1.2rem)]">
+      <div className="bg-[#383737] p-4 text-[clamp(1rem,3vw,1.2rem)]">
         {answer}
       </div>
     </details>
