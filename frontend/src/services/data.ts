@@ -1,10 +1,10 @@
-import tv from "@assets/tv.png";
-import tvHome from "@assets/tv-home.png";
-import tvScreen from "@assets/tv-screen.png";
-import display from "@assets/display.png";
-import planDuo from "@assets/plan-duo.png";
-import planMono from "@assets/plan-mono.png";
-import planFamiliar from "@assets/plan-familiar.png";
+import tv from "/assets/tv.png";
+import tvHome from "/assets/tv-home.png";
+import tvScreen from "/assets/tv-screen.png";
+import display from "/assets/display.png";
+import planDuo from "/assets/plan-duo.png";
+import planMono from "/assets/plan-mono.png";
+import planFamiliar from "/assets/plan-familiar.png";
 
 import {
   getUUID,
