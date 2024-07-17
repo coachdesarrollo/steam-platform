@@ -1,2 +1,1 @@
-export { PersonalData } from "./PersonalData";
-export { AccessCredentials } from "./AccessCredentials";
+export { default as RegisterLayout } from "./RegisterLayout";

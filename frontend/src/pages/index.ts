@@ -1,4 +1,9 @@
 export { Home } from "./Home";
 export { Login } from "./Login";
-export { Register } from "./Register";
 export { Subcription } from "./Subcription";
+export {
+  AccessCredentials,
+  PaymentSelection,
+  PersonalData,
+  VerifyEmail,
+} from "./Register";
