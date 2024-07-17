@@ -1,1 +1,1 @@
-export { default as VerifyEmail } from "./VerifyEmail";
+export { default as AccountVerification } from "./AccountVerification";

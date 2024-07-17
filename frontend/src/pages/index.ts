@@ -5,5 +5,5 @@ export {
   AccessCredentials,
   PaymentSelection,
   PersonalData,
-  VerifyEmail,
+  AccountVerification,
 } from "./Register";

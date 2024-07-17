@@ -3,30 +3,52 @@ import ReactDOM from "react-dom/client";
 
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home, Login, Register, Subcription } from "./pages";
-import { AccountVerification } from "./pages/AccountVerification";
+import {
+  AccessCredentials,
+  Home,
+  Login,
+  PaymentSelection,
+  PersonalData,
+  AccountVerification,
+  Subcription,
+} from "./pages";
+import { RegisterLayout } from "./components/Register";
+import { Step } from "./components/Register/propTypes.d";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />
+    element: <Home />,
   },
   {
     path: "login",
-    element: <Login />
+    element: <Login />,
   },
   {
-    path: "register",
-    element: <Register />
+    element: <RegisterLayout />,
+    children: [
+      {
+        path: Step.STEP_1,
+        element: <PersonalData />,
+      },
+      {
+        path: Step.STEP_2,
+        element: <AccessCredentials />,
+      },
+      {
+        path: Step.STEP_3,
+        element: <AccountVerification />,
+      },
+      {
+        path: Step.STEP_4,
+        element: <PaymentSelection />,
+      },
+    ],
   },
   {
     path: "subcription",
-    element: <Subcription />
+    element: <Subcription />,
   },
-  {
-    path: "account-verification",
-    element: <AccountVerification />
-  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
