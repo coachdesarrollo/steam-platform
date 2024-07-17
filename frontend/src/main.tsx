@@ -28,19 +28,19 @@ const router = createBrowserRouter([
     element: <RegisterLayout />,
     children: [
       {
-        path: Step.STEP_1,
+        path: `register/${Step.STEP_1}`,
         element: <PersonalData />,
       },
       {
-        path: Step.STEP_2,
+        path: `register/${Step.STEP_2}`,
         element: <AccessCredentials />,
       },
       {
-        path: Step.STEP_3,
+        path: `register/${Step.STEP_3}`,
         element: <AccountVerification />,
       },
       {
-        path: Step.STEP_4,
+        path: `register/${Step.STEP_4}`,
         element: <PaymentSelection />,
       },
     ],

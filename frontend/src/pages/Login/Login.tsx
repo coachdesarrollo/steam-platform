@@ -1,14 +1,13 @@
 import { FC } from "react";
-import { LoginProps } from "./propTypes";
-import { Link } from "react-router-dom";
-import { Button } from "../../components/Button";
-import {
-  ButtonSize,
-  ButtonStyle,
-  ButtonTheme,
-} from "../../config/themes/button";
+import { LoginProps } from "./propTypes.d";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "@/components/Button";
+import { ButtonSize, ButtonStyle, ButtonTheme } from "@/config/themes/button";
+import { Step } from "@/components/Register/propTypes.d";
 
 const Login: FC<LoginProps> = () => {
+  const navigate = useNavigate();
+
   return (
     <main className="grid place-content-center h-screen bg-banner-hero bg-no-repeat bg-cover bg-center bg-black/70 bg-blend-multiply">
       <form className="bg-black/60 grid gap-12 px-12 py-8">
@@ -41,7 +40,7 @@ const Login: FC<LoginProps> = () => {
                 />
                 Recordarme
               </label>
-              <Link to={""} className="text-sm underline">
+              <Link to={`/`} className="text-sm underline">
                 Olvide mi contraseña
               </Link>
             </div>
@@ -51,13 +50,14 @@ const Login: FC<LoginProps> = () => {
             variant={ButtonStyle.Standard}
             theme={ButtonTheme.Gold}
             size={ButtonSize.Small}
+            onClick={() => navigate("/")}
           >
             Iniciar Sesión
           </Button>
         </main>
 
         <Link
-          to={"register/personal-data"}
+          to={`/register/${Step.STEP_1}`}
           className="text-center text-[#928F8F] text-sm font-ligh underline"
         >
           Aun no estoy registrado
