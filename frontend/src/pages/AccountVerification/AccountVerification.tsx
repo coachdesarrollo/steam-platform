@@ -8,7 +8,7 @@ type VerificationButtonProps = Pick<
 const VerificationButton: React.FC<VerificationButtonProps> = ({
     type = "button", onClick, className, children, disabled
 }) => {
-    const sharedClassName = "inline-block shadow border-2 rounded-md cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg";
+    const sharedClassName = "inline-block shadow border-2 rounded-md cursor-pointer text-xl font-semibold px-4 py-2 transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg";
     const buttonClassName = className ? `${sharedClassName} ${className}` : sharedClassName;
     return (
         <button
@@ -43,10 +43,10 @@ const AccountVerification: React.FC = () => {
                     </section>
                 </section>
                 <section className="flex flex-col flex-wrap items-stretch justify-center px-8 sm:px-0 gap-y-3">
-                    <VerificationButton className="text-black border-[#f7df1e] bg-[#f7df1e] hover:bg-yellow-400 hover:border-yellow-400 text-xl font-semibold px-4 py-2">
+                    <VerificationButton className="text-black border-[#f7df1e] bg-[#f7df1e] hover:bg-yellow-400 hover:border-yellow-400">
                         Volver a generar
                     </VerificationButton>
-                    <VerificationButton className="border-[#f7df1e] text-[#f7df1e] bg-transparent hover:text-black hover:border-yellow-400 hover:bg-yellow-400 text-xl font-semibold px-4 py-2">
+                    <VerificationButton className="text-[#f7df1e] border-[#f7df1e] bg-transparent hover:text-black hover:border-yellow-400 hover:bg-yellow-400">
                         Listo
                     </VerificationButton>
                     <Link
