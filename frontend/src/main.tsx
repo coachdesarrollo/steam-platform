@@ -3,25 +3,30 @@ import ReactDOM from "react-dom/client";
 
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home, Login, Register, Subcription } from "./pages/index.ts";
+import { Home, Login, Register, Subcription } from "./pages";
+import { AccountVerification } from "./pages/AccountVerification";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Home />
   },
   {
     path: "login",
-    element: <Login />,
+    element: <Login />
   },
   {
     path: "register",
-    element: <Register />,
+    element: <Register />
   },
   {
     path: "subcription",
-    element: <Subcription />,
+    element: <Subcription />
   },
+  {
+    path: "account-verification",
+    element: <AccountVerification />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
