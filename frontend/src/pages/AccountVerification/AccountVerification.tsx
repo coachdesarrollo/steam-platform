@@ -1,5 +1,3 @@
-import { Button } from "@/components/Button";
-import { ButtonSize, ButtonStyle, ButtonTheme } from "@/config/themes/button";
 import { Link } from "react-router-dom";
 
 type VerificationButtonProps = Pick<
