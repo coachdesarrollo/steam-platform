@@ -168,3 +168,10 @@ export const goals: Goal[] = [
     description: "De Nuestros Estudiantes Alcanzan sus Metas Educativas.",
   },
 ];
+
+export const paymentTypes: string[] = [
+  "Tarjeta de crédito o débito",
+  "Efecty",
+  "PSE",
+  "Código de regalo",
+];
