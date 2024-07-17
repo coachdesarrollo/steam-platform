@@ -59,7 +59,7 @@ const Subcription: FC<SubcriptionProps> = () => {
           ))}
         </section>
 
-        <p className="text-center text-lg px-32 md:px-5 text-[#C8C8C8]">
+        <p className="text-center text-lg px-0 md:px-5 text-[#C8C8C8]">
           Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
           Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
           mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
@@ -81,19 +81,19 @@ const Subcription: FC<SubcriptionProps> = () => {
 
       <section className="grid gap-16 w-full py-32 lg:px-32 max-lg:px-12 bg-[#0E0E0E]">
         <hgroup className="grid gap-6">
-          <h2 className="text-5xl font-bold text-center">
+          <h2 className="text-5xl font-bold text-center ">
             Alcanza tus objetivos
           </h2>
-          <p className="text-center w-[70%] justify-self-center text-xl">
+          <p className="text-center w-[70%] justify-self-center text-xl max-md:w-full">
             Embárcate en un viaje de aprendizaje sin límites con nuestros planes
             mensuales, diseñados para impulsar tu crecimiento académico y
             profesional. ¡No esperes más para iniciar tu camino hacia el éxito!
           </p>
         </hgroup>
 
-        <article className="grid gap-12 lg:grid-flow-col md:px-6 max-sm:px-5">
+        <article className="grid gap-12 lg:grid-flow-col md:px-6 max-sm:px-4">
           {goals.map((goal) => (
-            <hgroup className="grid gap-2 text-center">
+            <hgroup className="grid gap-2 text-center max-lg:px-20 max-sm:px-0">
               <h3 className="text-[#F7DF1E] font-bold text-6xl text-pretty">
                 {goal.statistics}
               </h3>
@@ -121,10 +121,10 @@ const Subcription: FC<SubcriptionProps> = () => {
           />
         </div>
         <hgroup className="grid gap-6 text-center text-pretty">
-          <h2 className="text-5xl font-bold">
+          <h2 className="text-5xl font-bold max-md:text-4xl">
             Regala un año de aprendizaje con nuestros planes
           </h2>
-          <p className="w-[70%] justify-self-center text-xl">
+          <p className="w-[70%] justify-self-center text-xl max-md:text-lg">
             ¡Haz un regalo que inspire! Regala un año completo de acceso
             ilimitado a nuestros cursos con nuestro Plan Mono. Perfecto para
             amigos, familiares o colegas que buscan crecer y aprender. ¡Impulsa
@@ -140,11 +140,12 @@ const Subcription: FC<SubcriptionProps> = () => {
             Regala plan familiar
           </button>
         </div>
+      </section >
+      <section className="border-[#333333] border-y-2  bg-[#0E0E0E] h-auto">
+        <Faq />
       </section>
 
-      <hr className="border-[#333333] border-2" />
-
-      <Faq />
+   
     </main>
   );
 };
