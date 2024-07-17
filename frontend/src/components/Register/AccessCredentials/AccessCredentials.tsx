@@ -24,12 +24,12 @@ const AccessCredentials: FC = () => {
 
         <main className="grid gap-5">
           <label htmlFor="email" className="grid gap-2">
-            <span className="text-white">Correo Electronico *</span>
+            <span className="text-white">Correo Electrónico *</span>
             <input
               type="email"
               id="email"
               name="email"
-              placeholder="Ingrese su correo electronico"
+              placeholder="Ingrese su correo electrónico"
               className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white"
             />
           </label>
