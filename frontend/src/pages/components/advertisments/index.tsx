@@ -3,7 +3,7 @@ import { Advertisement } from "./advertisment";
 
 export function Advertisements() {
   return (
-    <>
+    <section>
       {advertisements.map((advertisement) => (
         <Advertisement
           key={advertisement.id}
@@ -13,6 +13,6 @@ export function Advertisements() {
           reverse={advertisement.reverse}
         />
       ))}
-    </>
+    </section>
   );
 }

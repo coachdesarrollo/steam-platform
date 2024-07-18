@@ -1,4 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
+import { Advertisements } from "./components/advertisments";
 import { Faq } from "./components/faq";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
@@ -11,7 +12,7 @@ function Home() {
   return (
     <>
       <Header />
-      {/* <Advertisements /> */}
+      <Advertisements />
       <Faq />
       <Footer />
     </>
