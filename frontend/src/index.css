@@ -4,6 +4,7 @@
 
 @layer base {
   html {
+    color-scheme: dark;
     background-color: #000;
   }
 
