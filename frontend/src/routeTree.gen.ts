@@ -17,7 +17,9 @@ import { Route as SubcriptionIndexImport } from './pages/subcription/index'
 import { Route as RegisterIndexImport } from './pages/register/index'
 import { Route as LoginIndexImport } from './pages/login/index'
 import { Route as RegisterLayoutImport } from './pages/register/_layout'
+import { Route as LoginProfileIndexImport } from './pages/login/profile/index'
 import { Route as RegisterLayoutFooImport } from './pages/register/_layout/foo'
+import { Route as LoginProfilePortalPerfilesImport } from './pages/login/profile/PortalPerfiles'
 import { Route as RegisterLayoutPersonalInfoIndexImport } from './pages/register/_layout/personal-info/index'
 import { Route as RegisterLayoutPaymentSelectionIndexImport } from './pages/register/_layout/payment-selection/index'
 import { Route as RegisterLayoutAccountVerificationIndexImport } from './pages/register/_layout/account-verification/index'
@@ -60,10 +62,22 @@ const RegisterLayoutRoute = RegisterLayoutImport.update({
   getParentRoute: () => RegisterRoute,
 } as any)
 
+const LoginProfileIndexRoute = LoginProfileIndexImport.update({
+  path: '/login/profile/',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const RegisterLayoutFooRoute = RegisterLayoutFooImport.update({
   path: '/foo',
   getParentRoute: () => RegisterLayoutRoute,
 } as any)
+
+const LoginProfilePortalPerfilesRoute = LoginProfilePortalPerfilesImport.update(
+  {
+    path: '/login/profile/PortalPerfiles',
+    getParentRoute: () => rootRoute,
+  } as any,
+)
 
 const RegisterLayoutPersonalInfoIndexRoute =
   RegisterLayoutPersonalInfoIndexImport.update({
@@ -135,12 +149,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SubcriptionIndexImport
       parentRoute: typeof rootRoute
     }
+    '/login/profile/PortalPerfiles': {
+      id: '/login/profile/PortalPerfiles'
+      path: '/login/profile/PortalPerfiles'
+      fullPath: '/login/profile/PortalPerfiles'
+      preLoaderRoute: typeof LoginProfilePortalPerfilesImport
+      parentRoute: typeof rootRoute
+    }
     '/register/_layout/foo': {
       id: '/register/_layout/foo'
       path: '/foo'
       fullPath: '/register/foo'
       preLoaderRoute: typeof RegisterLayoutFooImport
       parentRoute: typeof RegisterLayoutImport
+    }
+    '/login/profile/': {
+      id: '/login/profile/'
+      path: '/login/profile'
+      fullPath: '/login/profile'
+      preLoaderRoute: typeof LoginProfileIndexImport
+      parentRoute: typeof rootRoute
     }
     '/register/_layout/access-credential/': {
       id: '/register/_layout/access-credential/'
@@ -189,6 +217,8 @@ export const routeTree = rootRoute.addChildren({
   }),
   LoginIndexRoute,
   SubcriptionIndexRoute,
+  LoginProfilePortalPerfilesRoute,
+  LoginProfileIndexRoute,
 })
 
 /* prettier-ignore-end */
@@ -202,7 +232,9 @@ export const routeTree = rootRoute.addChildren({
         "/",
         "/register",
         "/login/",
-        "/subcription/"
+        "/subcription/",
+        "/login/profile/PortalPerfiles",
+        "/login/profile/"
       ]
     },
     "/": {
@@ -236,9 +268,15 @@ export const routeTree = rootRoute.addChildren({
     "/subcription/": {
       "filePath": "subcription/index.tsx"
     },
+    "/login/profile/PortalPerfiles": {
+      "filePath": "login/profile/PortalPerfiles.tsx"
+    },
     "/register/_layout/foo": {
       "filePath": "register/_layout/foo.tsx",
       "parent": "/register/_layout"
+    },
+    "/login/profile/": {
+      "filePath": "login/profile/index.tsx"
     },
     "/register/_layout/access-credential/": {
       "filePath": "register/_layout/access-credential/index.tsx",
