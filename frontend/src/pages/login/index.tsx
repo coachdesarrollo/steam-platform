@@ -57,7 +57,7 @@ export function Login() {
             size={ButtonSize.Small}
             onClick={() =>
               navigate({
-                to: "/",
+                to: "/login/profile",
               })
             }
           >

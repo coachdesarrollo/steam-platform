@@ -17,6 +17,7 @@ import { Route as SubcriptionIndexImport } from './pages/subcription/index'
 import { Route as RegisterIndexImport } from './pages/register/index'
 import { Route as LoginIndexImport } from './pages/login/index'
 import { Route as RegisterLayoutImport } from './pages/register/_layout'
+import { Route as LoginProfileIndexImport } from './pages/login/profile/index'
 import { Route as RegisterLayoutFooImport } from './pages/register/_layout/foo'
 import { Route as RegisterLayoutPersonalInfoIndexImport } from './pages/register/_layout/personal-info/index'
 import { Route as RegisterLayoutPaymentSelectionIndexImport } from './pages/register/_layout/payment-selection/index'
@@ -58,6 +59,11 @@ const LoginIndexRoute = LoginIndexImport.update({
 const RegisterLayoutRoute = RegisterLayoutImport.update({
   id: '/_layout',
   getParentRoute: () => RegisterRoute,
+} as any)
+
+const LoginProfileIndexRoute = LoginProfileIndexImport.update({
+  path: '/login/profile/',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const RegisterLayoutFooRoute = RegisterLayoutFooImport.update({
@@ -142,6 +148,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RegisterLayoutFooImport
       parentRoute: typeof RegisterLayoutImport
     }
+    '/login/profile/': {
+      id: '/login/profile/'
+      path: '/login/profile'
+      fullPath: '/login/profile'
+      preLoaderRoute: typeof LoginProfileIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/register/_layout/access-credential/': {
       id: '/register/_layout/access-credential/'
       path: '/access-credential'
@@ -189,6 +202,7 @@ export const routeTree = rootRoute.addChildren({
   }),
   LoginIndexRoute,
   SubcriptionIndexRoute,
+  LoginProfileIndexRoute,
 })
 
 /* prettier-ignore-end */
@@ -202,7 +216,8 @@ export const routeTree = rootRoute.addChildren({
         "/",
         "/register",
         "/login/",
-        "/subcription/"
+        "/subcription/",
+        "/login/profile/"
       ]
     },
     "/": {
@@ -239,6 +254,9 @@ export const routeTree = rootRoute.addChildren({
     "/register/_layout/foo": {
       "filePath": "register/_layout/foo.tsx",
       "parent": "/register/_layout"
+    },
+    "/login/profile/": {
+      "filePath": "login/profile/index.tsx"
     },
     "/register/_layout/access-credential/": {
       "filePath": "register/_layout/access-credential/index.tsx",
