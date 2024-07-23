@@ -4,9 +4,9 @@ import { NavBar } from "./navbar";
 export function Header() {
   return (
     <section
-      className={`h-screen bg-banner-hero bg-no-repeat bg-cover bg-center bg-black/70 bg-blend-multiply border-b-4 border-y-zinc-800 relative [animation-range:exit] [animation-timeline:view()] animate-scale`}
+      className={`relative h-screen animate-scale border-b-4 border-y-zinc-800 bg-black/70 bg-banner-hero bg-cover bg-center bg-no-repeat bg-blend-multiply [animation-range:exit] [animation-timeline:view()]`}
     >
-      <header className="h-full flex flex-col justify-between relative z-10">
+      <header className="relative z-10 flex h-full flex-col justify-between">
         <NavBar />
         <Hero />
       </header>

@@ -1,4 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
+
 import { Advertisements } from "./components/advertisments";
 import { Faq } from "./components/faq";
 import { Footer } from "./components/footer";

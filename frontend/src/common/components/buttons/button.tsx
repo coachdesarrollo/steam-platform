@@ -1,11 +1,7 @@
-import {
-  ButtonSize,
-  ButtonStyle,
-  ButtonTheme,
-  THEMES,
-} from "@/common/config/themes/button";
-import { getButtonAppearance } from "@/common/utils/classFormater";
 import { createElement, ReactNode } from "react";
+
+import { ButtonSize, ButtonStyle, ButtonTheme, THEMES } from "@/common/config/themes/button";
+import { getButtonAppearance } from "@/common/utils/classFormater";
 
 type ButtonProps = {
   theme?: ButtonTheme;
@@ -29,13 +25,12 @@ export function Button({
   const buttonFeatures = THEMES[theme][variant];
   const buttonClassNames = getButtonAppearance(buttonFeatures, size);
   const element = // const type = isLink ? "a" : "button";
-    isLink
-      ? { type: "a", attribute: "role" }
-      : { type: "button", attribute: "type" };
+    isLink ? { type: "a", attribute: "role" } : { type: "button", attribute: "type" };
   const props = {
     className: `${buttonClassNames} ${className}`,
     [element.attribute]: "button",
     onClick,
   };
+
   return createElement(element.type, { ...props }, children);
 }

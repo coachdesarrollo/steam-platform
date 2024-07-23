@@ -5,10 +5,12 @@ export enum ButtonTheme {
   Dark,
   Gold,
 }
+
 export enum ButtonStyle {
   Standard,
   Outline,
 }
+
 export enum ButtonSize {
   Small,
   Medium,
@@ -20,6 +22,7 @@ interface ButtonModel {
   readonly BACKGROUND: string;
   readonly BORDER: string;
 }
+
 export interface ButtonFeatures extends ButtonModel {
   readonly HOVER: ButtonModel;
 }

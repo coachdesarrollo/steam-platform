@@ -1,10 +1,7 @@
-import { Button } from "@/common/components/buttons";
-import {
-  ButtonSize,
-  ButtonStyle,
-  ButtonTheme,
-} from "@/common/config/themes/button";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
+
+import { Button } from "@/common/components/buttons";
+import { ButtonSize, ButtonStyle, ButtonTheme } from "@/common/config/themes/button";
 
 export const Route = createFileRoute("/register/_layout/personal-info/")({
   component: PersonalInfo,
@@ -15,100 +12,98 @@ function PersonalInfo() {
 
   return (
     <form
-      className="bg-[#000000cd] gap-5 px-10 py-8 relative w-[480px] grid max-md:w-screen max-md:bg-[#0000007c] h-screen pt-5 "
-      autoComplete="off"
       autoCapitalize="sentences"
+      autoComplete="off"
+      className="relative grid h-screen w-[480px] gap-5 bg-[#000000cd] px-10 py-8 pt-5 max-md:w-screen max-md:bg-[#0000007c]"
     >
-      <div className="w-full grid place-content-center">
-        <span className="text-white/50 text-center text-sm">1 de 5</span>
-        <h2 className="text-white font-bold text-4xl text-center max-md:text-3xl">
-          Registrarse
-        </h2>
+      <div className="grid w-full place-content-center">
+        <span className="text-center text-sm text-white/50">1 de 5</span>
+        <h2 className="text-center text-4xl font-bold text-white max-md:text-3xl">Registrarse</h2>
       </div>
 
-      <main className="grid gap-5 max-md:text-sm ">
-        <label htmlFor="name" className="grid gap-2 ">
+      <main className="grid gap-5 max-md:text-sm">
+        <label className="grid gap-2" htmlFor="name">
           <span className="text-white">Nombre *</span>
           <input
-            type="text"
+            className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
             id="name"
             placeholder="Ingrese su primer nombre"
-            className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white"
+            type="text"
           />
         </label>
-        <label htmlFor="last-name" className="grid gap-2">
+        <label className="grid gap-2" htmlFor="last-name">
           <span className="text-white">Apellido *</span>
           <input
-            type="text"
+            className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
             id="last-name"
             name="lastName"
             placeholder="Ingrese su primer apellido"
-            className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white"
+            type="text"
           />
         </label>
-        <label htmlFor="phone" className="grid gap-2">
+        <label className="grid gap-2" htmlFor="phone">
           <span className="text-white">Celular *</span>
           <input
-            type="tel"
+            className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none marker:hidden"
             id="phone"
             name="phone"
             pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3}"
-            size={10}
             placeholder="Digite su numero de celular"
-            className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white marker:hidden"
+            size={10}
+            type="tel"
           />
         </label>
         <div className="flex gap-4">
-          <label htmlFor="province" className="grid gap-2 flex-1">
+          <label className="grid flex-1 gap-2" htmlFor="province">
             <span className="text-white">País *</span>
             <select
-              name="province"
+              className="appearance-none rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
               id="province"
-              className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white appearance-none"
+              name="province"
             >
               <option value="atlántico">Atlántico</option>
             </select>
           </label>
-          <label htmlFor="town" className="grid gap-2 flex-1">
+          <label className="grid flex-1 gap-2" htmlFor="town">
             <span className="text-white">Municipio *</span>
             <select
-              name="town"
+              className="appearance-none rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
               id="town"
-              className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white appearance-none"
+              name="town"
             >
               <option value="Barranquilla">B/quilla</option>
             </select>
           </label>
         </div>
 
-        <label htmlFor="birthday" className="grid gap-2">
+        <label className="grid gap-2" htmlFor="birthday">
           <span className="text-white">Fecha de nacimiento *</span>
           <input
-            type="date"
+            className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
             id="birthday"
             name="birthday"
             placeholder="DD / MM / AA"
-            className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white"
+            type="date"
           />
         </label>
-        <label htmlFor="address" className="grid gap-2">
+        <label className="grid gap-2" htmlFor="address">
           <span className="text-white">Dirección</span>
           <input
-            type="text"
+            className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
             id="address"
             name="address"
             placeholder="Ingrese su dirección de residencia"
-            className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white"
+            type="text"
           />
         </label>
       </main>
 
       <Button
-        variant={ButtonStyle.Outline}
-        theme={ButtonTheme.Gold}
+        className="mt-5 h-16"
         size={ButtonSize.Small}
+        theme={ButtonTheme.Gold}
+        variant={ButtonStyle.Outline}
         onClick={() => navigate({ to: "/register/access-credential" })}
-        className="h-16 mt-5"
       >
         Continuar
       </Button>

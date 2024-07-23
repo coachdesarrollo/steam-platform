@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+
 import { Portal } from "./components/portalPerfil";
 
 export const Route = createFileRoute("/login/profile/")({
@@ -6,5 +7,5 @@ export const Route = createFileRoute("/login/profile/")({
 });
 
 function ProfilePage() {
-  return <Portal />
+  return <Portal />;
 }

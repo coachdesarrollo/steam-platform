@@ -1,10 +1,7 @@
-import { Button } from "@/common/components/buttons";
-import {
-  ButtonSize,
-  ButtonStyle,
-  ButtonTheme,
-} from "@/common/config/themes/button";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+
+import { Button } from "@/common/components/buttons";
+import { ButtonSize, ButtonStyle, ButtonTheme } from "@/common/config/themes/button";
 
 export const Route = createFileRoute("/login/")({
   component: Login,
@@ -14,47 +11,42 @@ export function Login() {
   const navigate = useNavigate();
 
   return (
-    <main className="grid place-content-center h-screen bg-banner-hero bg-no-repeat bg-cover bg-center bg-black/70 bg-blend-multiply">
-      <form className="bg-black/60 grid gap-12 px-12 py-8">
-        <h2 className="text-white font-bold text-4xl text-center">
-          Iniciar Sesión
-        </h2>
+    <main className="grid h-screen place-content-center bg-black/70 bg-banner-hero bg-cover bg-center bg-no-repeat bg-blend-multiply">
+      <form className="grid gap-12 bg-black/60 px-12 py-8">
+        <h2 className="text-center text-4xl font-bold text-white">Iniciar Sesión</h2>
 
         <main className="grid gap-5">
           <input
-            type="text"
+            className="rounded-md border-[1px] border-white bg-transparent px-4 py-3 text-white outline-none"
             placeholder="Usuario"
-            className="px-4 py-3 rounded-md outline-none bg-transparent border-[1px] border-white text-white "
+            type="text"
           />
           <input
-            type="password"
+            className="rounded-md border-[1px] border-white bg-transparent px-4 py-3 text-white outline-none"
             placeholder="Contraseña"
-            className="px-4 py-3 rounded-md outline-none bg-transparent border-[1px] border-white text-white"
+            type="password"
           />
 
-          <div className="grid gap-4 text-[#928F8F] font-light">
-            <div className="flex gap-16 items-center">
-              <label
-                htmlFor="reminder"
-                className="flex items-center gap-1.5 text-sm"
-              >
+          <div className="grid gap-4 font-light text-[#928F8F]">
+            <div className="flex items-center gap-16">
+              <label className="flex items-center gap-1.5 text-sm" htmlFor="reminder">
                 <input
-                  type="checkbox"
+                  className="grid h-5 w-5 appearance-none place-content-center rounded-sm border-2 border-white font-extrabold text-white transition-colors ease-in-out checked:bg-white checked:after:content-['✔']"
                   id="reminder"
-                  className="appearance-none border-2 border-white checked:bg-white rounded-sm w-5 h-5 transition-colors checked:after:content-['✔'] grid place-content-center text-white font-extrabold ease-in-out"
+                  type="checkbox"
                 />
                 Recordarme
               </label>
-              <Link to={`/`} className="text-sm underline">
+              <Link className="text-sm underline" to={`/`}>
                 Olvide mi contraseña
               </Link>
             </div>
           </div>
 
           <Button
-            variant={ButtonStyle.Standard}
-            theme={ButtonTheme.Gold}
             size={ButtonSize.Small}
+            theme={ButtonTheme.Gold}
+            variant={ButtonStyle.Standard}
             onClick={() =>
               navigate({
                 to: "/login/profile",
@@ -65,7 +57,7 @@ export function Login() {
           </Button>
         </main>
 
-        <Link className="text-center text-[#928F8F] text-sm font-ligh underline">
+        <Link className="font-ligh text-center text-sm text-[#928F8F] underline">
           Aun no estoy registrado
         </Link>
       </form>

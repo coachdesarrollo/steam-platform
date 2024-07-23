@@ -1,11 +1,8 @@
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
+
 import { Button } from "@/common/components/buttons";
 import { UserIcon } from "@/common/components/icons";
-import {
-  ButtonSize,
-  ButtonStyle,
-  ButtonTheme,
-} from "@/common/config/themes/button";
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { ButtonSize, ButtonStyle, ButtonTheme } from "@/common/config/themes/button";
 
 export const Route = createFileRoute("/register/_layout/access-credential/")({
   component: AccessCredential,
@@ -16,71 +13,69 @@ function AccessCredential() {
 
   return (
     <form
-      className="bg-[#000000cd] grid gap-6 px-12 py-8 w-[480px] relative max-md:w-screen max-md:bg-[#0000007c] h-screen pt-5 "
-      autoComplete="off"
       autoCapitalize="sentences"
+      autoComplete="off"
+      className="relative grid h-screen w-[480px] gap-6 bg-[#000000cd] px-12 py-8 pt-5 max-md:w-screen max-md:bg-[#0000007c]"
     >
-      <div className=" w-full grid place-content-center">
-        <span className="text-white/50 text-center text-sm">2 de 5</span>
-        <h2 className="text-white font-bold text-4xl text-center max-md:text-3xl">
-          Registrarse
-        </h2>
+      <div className="grid w-full place-content-center">
+        <span className="text-center text-sm text-white/50">2 de 5</span>
+        <h2 className="text-center text-4xl font-bold text-white max-md:text-3xl">Registrarse</h2>
       </div>
 
-      <main className="grid gap-5 max-md:text-sm ">
-        <label htmlFor="email" className="grid gap-2">
+      <main className="grid gap-5 max-md:text-sm">
+        <label className="grid gap-2" htmlFor="email">
           <span className="text-white">Correo Electrónico *</span>
           <input
-            type="email"
+            className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
             id="email"
             name="email"
             placeholder="Ingrese su correo electrónico"
-            className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white"
+            type="email"
           />
         </label>
-        <label htmlFor="username" className="grid gap-2">
+        <label className="grid gap-2" htmlFor="username">
           <span className="text-white">Nombre de usuario *</span>
           <input
-            type="text"
+            className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
             id="username"
             name="username"
             placeholder="Defina su nombre de usuario"
-            className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white"
+            type="text"
           />
         </label>
-        <label htmlFor="password" className="grid gap-2">
+        <label className="grid gap-2" htmlFor="password">
           <span className="text-white">Contraseña *</span>
           <input
-            type="password"
+            className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
             id="password"
             name="password"
             placeholder="Establezca una contraseña segura"
-            className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white"
+            type="password"
           />
         </label>
-        <label htmlFor="confirm-password" className="grid gap-2">
+        <label className="grid gap-2" htmlFor="confirm-password">
           <span className="text-white">Confirmar Contraseña *</span>
           <input
-            type="password"
+            className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
             id="confirm-password"
             name="confirmPassword"
             placeholder="Repita la contraseña para continuar"
-            className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white"
+            type="password"
           />
         </label>
-        <label htmlFor="photo" className="grid gap-2">
+        <label className="grid gap-2" htmlFor="photo">
           <span className="text-white">Foto de perfil</span>
           <div className="relative">
             <input
-              type="file"
+              className="invisible absolute h-5 appearance-none rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
               id="photo"
               name="photo"
               placeholder="Repita la contraseña para continuar"
-              className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white appearance-none h-5 invisible absolute"
+              type="file"
             />
-            <div className="flex justify-start items-center gap-3 text-white/40 bg-[#333] rounded-md px-3 py-5 max-md:gap-">
-              <UserIcon className="max-md:w-8 w-10 justify-start"/>
-              <span className="font-semibold text-start text-pretty w-full text-lg text-white/60 max-md:text-lg max-sm:text-sm">
+            <div className="max-md:gap- flex items-center justify-start gap-3 rounded-md bg-[#333] px-3 py-5 text-white/40">
+              <UserIcon className="w-10 justify-start max-md:w-8" />
+              <span className="w-full text-pretty text-start text-lg font-semibold text-white/60 max-md:text-lg max-sm:text-sm">
                 Sube o arrastra tu imagen de perfil
               </span>
             </div>
@@ -88,10 +83,10 @@ function AccessCredential() {
         </label>
       </main>
       <Button
-        variant={ButtonStyle.Outline}
-        theme={ButtonTheme.Gold}
+        className="mt-6 h-16"
         size={ButtonSize.Small}
-        className="h-16 mt-6"
+        theme={ButtonTheme.Gold}
+        variant={ButtonStyle.Outline}
         onClick={() =>
           navigate({
             to: "/register/account-verification",

@@ -6,7 +6,7 @@ export const Route = createFileRoute("/register/_layout")({
 
 export function RegisterLayout() {
   return (
-    <main className="grid h-screen bg-banner-hero bg-no-repeat bg-cover bg-center bg-black/70 bg-blend-multiply place-content-center">
+    <main className="grid h-screen place-content-center bg-black/70 bg-banner-hero bg-cover bg-center bg-no-repeat bg-blend-multiply">
       <Outlet />
     </main>
   );

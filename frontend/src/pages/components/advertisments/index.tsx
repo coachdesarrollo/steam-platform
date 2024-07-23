@@ -1,4 +1,5 @@
 import { advertisements } from "../../data";
+
 import { Advertisement } from "./advertisment";
 
 export function Advertisements() {
@@ -7,10 +8,10 @@ export function Advertisements() {
       {advertisements.map((advertisement) => (
         <Advertisement
           key={advertisement.id}
-          title={advertisement.title}
           description={advertisement.description}
-          thumbnail={advertisement.thumbnail}
           reverse={advertisement.reverse}
+          thumbnail={advertisement.thumbnail}
+          title={advertisement.title}
         />
       ))}
     </section>

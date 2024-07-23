@@ -1,23 +1,22 @@
 import { Button } from "@/common/components/buttons";
 import { ButtonSize, ButtonStyle } from "@/common/config/themes/button";
+
 import { Link } from "@tanstack/react-router";
+
 import logoLarge from "/assets/imagotiposteamwhite.png";
 import logoTiny from "/assets/light-logo.png";
 
 export function NavBar() {
   return (
-    <nav className="bg-transparent text-white px-20 sm:px-14 pt-0 flex  sm:flex-row justify-between items-center w-full z-10 max-sm:px-8">
+    <nav className="z-10 flex w-full items-center justify-between bg-transparent px-20 pt-0 text-white max-sm:px-8 sm:flex-row sm:px-14">
       <div //
-       className="flex justify-center items-center space-x-4 mb-4 sm:mb-0 ">
-        <img className="max-w-xs hidden sm:block" src={logoLarge} alt="SteamAcademy" />
-        <img className="max-w-xs block sm:hidden h-10" src={logoTiny} alt="SteamAcademy" />
+        className="mb-4 flex items-center justify-center space-x-4 sm:mb-0"
+      >
+        <img alt="SteamAcademy" className="hidden max-w-xs sm:block" src={logoLarge} />
+        <img alt="SteamAcademy" className="block h-10 max-w-xs sm:hidden" src={logoTiny} />
       </div>
       <Link to="/login">
-        <Button
-          size={ButtonSize.Small}
-          variant={ButtonStyle.Outline}
-          isLink={true}
-        >
+        <Button isLink={true} size={ButtonSize.Small} variant={ButtonStyle.Outline}>
           Iniciar Sesión
         </Button>
       </Link>
