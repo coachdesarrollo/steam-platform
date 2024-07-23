@@ -15,19 +15,19 @@ function PersonalInfo() {
 
   return (
     <form
-      className="bg-black gap-6 px-12 py-8 relative w-[480px] grid "
+      className="bg-[#000000cd] gap-5 px-10 py-8 relative w-[480px] grid max-md:w-screen max-md:bg-[#0000007c] h-screen pt-5 "
       autoComplete="off"
       autoCapitalize="sentences"
     >
       <div className="w-full grid place-content-center">
         <span className="text-white/50 text-center text-sm">1 de 5</span>
-        <h2 className="text-white font-bold text-4xl text-center">
+        <h2 className="text-white font-bold text-4xl text-center max-md:text-3xl">
           Registrarse
         </h2>
       </div>
 
-      <main className="grid gap-5">
-        <label htmlFor="name" className="grid gap-2">
+      <main className="grid gap-5 max-md:text-sm ">
+        <label htmlFor="name" className="grid gap-2 ">
           <span className="text-white">Nombre *</span>
           <input
             type="text"
@@ -66,7 +66,7 @@ function PersonalInfo() {
               id="province"
               className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white appearance-none"
             >
-              <option value="atlantico">atlantico</option>
+              <option value="atlántico">Atlántico</option>
             </select>
           </label>
           <label htmlFor="town" className="grid gap-2 flex-1">
@@ -76,7 +76,7 @@ function PersonalInfo() {
               id="town"
               className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white appearance-none"
             >
-              <option value="barranquilla">B/quilla</option>
+              <option value="Barranquilla">B/quilla</option>
             </select>
           </label>
         </div>

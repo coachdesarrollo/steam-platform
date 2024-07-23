@@ -16,18 +16,18 @@ function AccessCredential() {
 
   return (
     <form
-      className="bg-black grid gap-6 px-12 py-8 w-[480px] relative"
+      className="bg-[#000000cd] grid gap-6 px-12 py-8 w-[480px] relative max-md:w-screen max-md:bg-[#0000007c] h-screen pt-5 "
       autoComplete="off"
       autoCapitalize="sentences"
     >
       <div className=" w-full grid place-content-center">
         <span className="text-white/50 text-center text-sm">2 de 5</span>
-        <h2 className="text-white font-bold text-4xl text-center">
+        <h2 className="text-white font-bold text-4xl text-center max-md:text-3xl">
           Registrarse
         </h2>
       </div>
 
-      <main className="grid gap-5">
+      <main className="grid gap-5 max-md:text-sm ">
         <label htmlFor="email" className="grid gap-2">
           <span className="text-white">Correo Electrónico *</span>
           <input
@@ -78,11 +78,9 @@ function AccessCredential() {
               placeholder="Repita la contraseña para continuar"
               className="px-4 py-3 rounded-md outline-none bg-[#333333] text-white appearance-none h-5 invisible absolute"
             />
-            <div className="flex justify-center items-center gap-6 text-white/40 bg-[#333] rounded-md py-5">
-              <div className="p-1.5 rounded-md border-[#fff6] border-[4px]">
-                <UserIcon />
-              </div>
-              <span className="font-semibold text-center text-pretty w-40 text-lg text-white/60">
+            <div className="flex justify-start items-center gap-3 text-white/40 bg-[#333] rounded-md px-3 py-5 max-md:gap-">
+              <UserIcon className="max-md:w-8 w-10 justify-start"/>
+              <span className="font-semibold text-start text-pretty w-full text-lg text-white/60 max-md:text-lg max-sm:text-sm">
                 Sube o arrastra tu imagen de perfil
               </span>
             </div>
