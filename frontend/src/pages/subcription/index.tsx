@@ -20,7 +20,7 @@ function Subcription() {
       <header className=" grid gap-12 bg-black py-16 lg:px-32 max-lg:px-12">
         <h2 className="text-5xl font-bold text-center">Seleccionar Plan</h2>
 
-        <section className="flex flex-wrap gap-4">
+        <section className="flex flex-wrap gap-5 max-md:gap-7">
           {subcriptions.map((subcription) => (
             <article
               className={`bg-[#1D1D1D] flex flex-col gap-3 p-4 rounded-md cursor-pointer hover:scale-105 transition-transform border-transparent border-2 hover:border-2 hover:border-white flex-1 basis-[300px] relative group`}
@@ -126,7 +126,7 @@ function Subcription() {
           <h2 className="text-5xl font-bold max-md:text-4xl">
             Regala un año de aprendizaje con nuestros planes
           </h2>
-          <p className="w-[70%] justify-self-center text-xl max-md:text-lg">
+          <p className="w-[70%] justify-self-center text-xl max-md:text-lg max-sm:w-full">
             ¡Haz un regalo que inspire! Regala un año completo de acceso
             ilimitado a nuestros cursos con nuestro Plan Mono. Perfecto para
             amigos, familiares o colegas que buscan crecer y aprender. ¡Impulsa
