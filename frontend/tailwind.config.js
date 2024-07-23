@@ -10,6 +10,8 @@ export default {
         scale: "scale linear forwards",
         "fade-out": "fade-out linear",
         slide: "slide linear forwards",
+        "small-text": "small-text 1s forwards",
+        "big-text": "big-text 1s forwards",
       },
       keyframes: {
         scale: {
@@ -26,6 +28,22 @@ export default {
           "100%": {
             transform: "translate(0)",
             opacity: 1,
+          },
+        },
+        "small-text": {
+          from: {
+            "font-size": "max(1.2rem, 1.3vw)",
+          },
+          to: {
+            "font-size": "max(16px, 1.1vw)",
+          },
+        },
+        "big-text": {
+          from: {
+            "font-size": "max(16px, 1.1vw)",
+          },
+          to: {
+            "font-size": "max(1.2rem, 1.3vw)",
           },
         },
       },

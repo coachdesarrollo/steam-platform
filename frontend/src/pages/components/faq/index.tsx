@@ -7,7 +7,7 @@ export function Faq() {
       <h2 className="font-bold text-white text-5xl text-center">
         Preguntas Frecuentes
       </h2>
-      <section className="grid gap-2">
+      <section className="grid gap-8">
         {faq.map(({ question, answer, id }) => (
           <Question answer={answer} question={question} key={id} />
         ))}
