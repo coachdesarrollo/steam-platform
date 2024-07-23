@@ -91,6 +91,7 @@ function AccessCredential() {
         variant={ButtonStyle.Outline}
         theme={ButtonTheme.Gold}
         size={ButtonSize.Small}
+        className="h-16 mt-6"
         onClick={() =>
           navigate({
             to: "/register/account-verification",

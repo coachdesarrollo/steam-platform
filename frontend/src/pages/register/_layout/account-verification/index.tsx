@@ -14,7 +14,7 @@ function AccountVerification() {
     "w-16 sm:flex-1 border-2 border-[#615D5D] grid place-content-center";
 
   return (
-    <form className="bg-black/60 grid gap-12 text-center px-6 sm:px-12 py-8">
+    <form className="justify-center bg-black/60 grid gap-12 text-center px-6 sm:px-12 py-8 max-md:w-screen pt-5">
       <section className="max-w-sm sm:max-w-sm grid place-content-center">
         <span className="text-sm text-white/50">3 de 4</span>
         <h2 className="text-4xl text-white font-bold mb-6">

@@ -108,6 +108,7 @@ function PersonalInfo() {
         theme={ButtonTheme.Gold}
         size={ButtonSize.Small}
         onClick={() => navigate({ to: "/register/access-credential" })}
+        className="h-16 mt-5"
       >
         Continuar
       </Button>
