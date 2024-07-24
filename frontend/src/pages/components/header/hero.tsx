@@ -24,7 +24,7 @@ export function Hero() {
         isLink={true}
         size={ButtonSize.Large}
         variant={ButtonStyle.Standard}
-        onClick={() => navigate({ to: "/subcription" })}
+        onClick={() => navigate({ to: "/register/personal-info" })}
       >
         Registrarme
       </Button>
