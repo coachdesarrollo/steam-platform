@@ -6,7 +6,7 @@ import { Link } from "@tanstack/react-router";
 import logoLarge from "/assets/imagotiposteamwhite.png";
 import logoTiny from "/assets/light-logo.png";
 
-export function NavBar() {
+export function LandNavBar() {
   return (
     <nav className="z-10 flex w-full items-center justify-between bg-transparent px-20 pt-0 text-white max-sm:px-8 sm:flex-row sm:px-14">
       <div //
