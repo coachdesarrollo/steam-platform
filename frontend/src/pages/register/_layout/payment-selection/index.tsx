@@ -9,8 +9,8 @@ export const Route = createFileRoute("/register/_layout/payment-selection/")({
 function PaymentSelection() {
   const navigate = useNavigate();
 
-  return (
-    <div className="w-[480px] items-center justify-center gap-7 space-y-8 bg-black/60 p-6 pt-5 max-sm:h-screen max-sm:w-screen max-sm:space-y-8 max-sm:bg-[#0000007c]">
+  return ( //w-[480px] items-center justify-center gap-7 space-y-8 bg-black/60 p-6 pt-5 max-sm:h-screen max-sm:w-screen max-sm:min-h-screen max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:bg-[#0000007c]
+    <div className="w-[480px] items-center justify-center gap-7 space-y-8 bg-black/60 p-6 pt-5 max-sm:h-screen max-sm:w-screen max-sm:min-h-screen max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:space-y-2 max-sm:bg-[#0000007c]">
       <div className="grid w-full place-content-center">
         <span className="text-center text-sm text-white/50">4 de 5</span>
         <h2 className="text-center text-4xl font-bold text-white">Elige como quieres pagar</h2>
