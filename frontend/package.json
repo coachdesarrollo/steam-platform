@@ -12,9 +12,12 @@
     "watch-routes": "tsr watch"
   },
   "dependencies": {
+    "@tanstack/react-form": "^0.26.4",
     "@tanstack/react-router": "^1.45.4",
+    "@tanstack/zod-form-adapter": "^0.26.4",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@eslint/compat": "^1.1.1",
