@@ -4,7 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        'sans': ['Inter', 'sans-serif']
+        'sans': ['Inter', 'sans-serif'], //global-font
+        'montserrat': ['Montserrat'],
+        'poppins': ['Poppins'],
       },
       backgroundImage: {
         "banner-hero": "url('/assets/banner-hero.png')",

@@ -30,11 +30,11 @@ function Subcription() {
             >
               <div className="grid flex-1 gap-1 text-center">
                 {subcription.morePopular && (
-                  <h2 className="absolute -top-4 left-0 w-full rounded-t-md bg-white py-0.5 font-semibold text-black transition-all duration-200 [transform-origin:top] group-hover:opacity-0">
+                  <h2 className="absolute -top-4 left-0 w-full rounded-t-md bg-white py-0.5 font-bold italic text-black transition-all duration-200 [transform-origin:top] group-hover:opacity-0">
                     Mas popular
                   </h2>
                 )}
-                <h3 className="text-lg font-semibold">Plan {subcription.name}</h3>
+                <h3 className="text-lg font-semibold italic">Plan {subcription.name}</h3>
                 <img
                   alt="plan icon"
                   className="h-40 w-40 justify-self-center"
@@ -97,7 +97,7 @@ function Subcription() {
               key={goal.description}
               className="grid gap-2 text-center max-lg:px-20 max-sm:px-0"
             >
-              <h3 className="text-pretty text-6xl font-bold text-[#F7DF1E]">{goal.statistics}</h3>
+              <h3 className="text-pretty text-6xl font-poppins font-bold italic text-[#F7DF1E]">{goal.statistics}</h3>
               <p>{goal.description}</p>
             </hgroup>
           ))}
