@@ -4,7 +4,7 @@ import { InputHTMLAttributes } from "react";
 interface BasicInputProps extends InputHTMLAttributes<HTMLInputElement> {
   state: FieldState<string>;
   handleChange: (updater: Updater<string>) => void;
-  label: string;
+  label?: string;
   isRequired?: boolean;
   children?: React.ReactNode;
 }
@@ -22,14 +22,17 @@ export function BasicInput({
 }: BasicInputProps) {
   return (
     <label className="grid gap-2" htmlFor={name}>
-      <span className="text-white">
-        {label} {isRequired && "*"}
-      </span>
+      {label && (
+        <span className="text-white">
+          {label} {isRequired && "*"}
+        </span>
+      )}
       <input
         className={`rounded-md bg-[#333333] px-4 py-3 text-white outline-none ${className}`}
         id={name}
         name={name}
         placeholder={placeholder}
+        required={isRequired}
         type={type}
         onChange={(e) => handleChange(e.currentTarget.value)}
       />
