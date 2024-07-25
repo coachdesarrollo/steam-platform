@@ -18,7 +18,6 @@ import { Route as RegisterIndexImport } from './pages/register/index'
 import { Route as LoginIndexImport } from './pages/login/index'
 import { Route as RegisterLayoutImport } from './pages/register/_layout'
 import { Route as LoginProfileIndexImport } from './pages/login/profile/index'
-import { Route as RegisterLayoutFooImport } from './pages/register/_layout/foo'
 import { Route as RegisterLayoutPersonalInfoIndexImport } from './pages/register/_layout/personal-info/index'
 import { Route as RegisterLayoutPaymentSelectionIndexImport } from './pages/register/_layout/payment-selection/index'
 import { Route as RegisterLayoutAccountVerificationIndexImport } from './pages/register/_layout/account-verification/index'
@@ -64,11 +63,6 @@ const RegisterLayoutRoute = RegisterLayoutImport.update({
 const LoginProfileIndexRoute = LoginProfileIndexImport.update({
   path: '/login/profile/',
   getParentRoute: () => rootRoute,
-} as any)
-
-const RegisterLayoutFooRoute = RegisterLayoutFooImport.update({
-  path: '/foo',
-  getParentRoute: () => RegisterLayoutRoute,
 } as any)
 
 const RegisterLayoutPersonalInfoIndexRoute =
@@ -141,13 +135,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SubcriptionIndexImport
       parentRoute: typeof rootRoute
     }
-    '/register/_layout/foo': {
-      id: '/register/_layout/foo'
-      path: '/foo'
-      fullPath: '/register/foo'
-      preLoaderRoute: typeof RegisterLayoutFooImport
-      parentRoute: typeof RegisterLayoutImport
-    }
     '/login/profile/': {
       id: '/login/profile/'
       path: '/login/profile'
@@ -192,7 +179,6 @@ export const routeTree = rootRoute.addChildren({
   IndexLazyRoute,
   RegisterRoute: RegisterRoute.addChildren({
     RegisterLayoutRoute: RegisterLayoutRoute.addChildren({
-      RegisterLayoutFooRoute,
       RegisterLayoutAccessCredentialIndexRoute,
       RegisterLayoutAccountVerificationIndexRoute,
       RegisterLayoutPaymentSelectionIndexRoute,
@@ -234,7 +220,6 @@ export const routeTree = rootRoute.addChildren({
       "filePath": "register/_layout.tsx",
       "parent": "/register",
       "children": [
-        "/register/_layout/foo",
         "/register/_layout/access-credential/",
         "/register/_layout/account-verification/",
         "/register/_layout/payment-selection/",
@@ -250,10 +235,6 @@ export const routeTree = rootRoute.addChildren({
     },
     "/subcription/": {
       "filePath": "subcription/index.tsx"
-    },
-    "/register/_layout/foo": {
-      "filePath": "register/_layout/foo.tsx",
-      "parent": "/register/_layout"
     },
     "/login/profile/": {
       "filePath": "login/profile/index.tsx"

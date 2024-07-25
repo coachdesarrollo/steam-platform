@@ -1,6 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 
-import { VerificationBtn } from "./components/verification-btn/verification-btn";
+import { VerificationBtn } from "./components/verification-btn";
 
 export const Route = createFileRoute("/register/_layout/account-verification/")({
   component: AccountVerification,
@@ -12,7 +12,7 @@ function AccountVerification() {
   const sharedClassName = "w-16 sm:flex-1 border-2 border-[#615D5D] grid place-content-center";
 
   return (
-    <form className="grid justify-center gap-11 max-md:gap-5 bg-black/60 px-6 py-8 pt-5 text-center max-md:w-screen max-sm:w-screen max-sm:min-h-screen max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center sm:px-12 ">
+    <form className="grid justify-center gap-11 bg-black/60 px-6 py-8 pt-5 text-center max-md:w-screen max-md:gap-5 max-sm:flex max-sm:min-h-screen max-sm:w-screen max-sm:flex-col max-sm:items-center max-sm:justify-center sm:px-12">
       <section className="grid max-w-sm place-content-center sm:max-w-sm">
         <span className="text-sm text-white/50">3 de 4</span>
         <h2 className="mb-6 text-4xl font-bold text-white">

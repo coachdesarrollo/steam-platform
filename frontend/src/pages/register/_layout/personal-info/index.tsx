@@ -1,46 +1,22 @@
 import { useForm } from "@tanstack/react-form";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { zodValidator } from "@tanstack/zod-form-adapter";
-import z from "zod";
+
+import {
+  AddressSchema,
+  BirhtdaySchema,
+  LastnameSchema,
+  PersonalInfoSchema,
+  PhoneSchema,
+  ProvinceSchema,
+  TownSchema,
+  UsernameSchema,
+} from "./schemas";
+import { PersonalInfo } from "./types";
 
 export const Route = createFileRoute("/register/_layout/personal-info/")({
   component: PersonalInfo,
 });
-
-export interface PersonalInfo {
-  name: string;
-  lastname: string;
-  phone: string;
-  province: string;
-  town: string;
-  birthday: string;
-  address: string;
-}
-
-const UsernameSchema = z
-  .string({ message: "debe ser un string" })
-  .min(3, "Username must be at least 3 characters")
-  .max(12, "Username cannot be longer than 15 characters");
-
-const LastnameSchema = z
-  .string({ message: "debe ser un string" })
-  .min(3, "Lastname must be at least 3 characters")
-  .max(10, "Lastname cannot be longer than 15 characters");
-
-const PhoneSchema = z
-  .string({ required_error: "Phone is required" })
-  .regex(/^3(?!(\d)\1{3})[0-9]{9}$/, "Phone number is not valid");
-
-const ProvinceSchema = z.string().min(3, "Este campo es requerido");
-
-const TownSchema = z.string().min(3, "Este campo es requerido");
-
-const BirhtdaySchema = z.string().date("Esta fecha no es valida");
-
-const AddressSchema = z
-  .string()
-  .min(3, "Username must be at least 3 characters")
-  .max(12, "Username cannot be longer than 15 characters");
 
 function PersonalInfo() {
   const navigate = useNavigate();
@@ -57,8 +33,11 @@ function PersonalInfo() {
     },
 
     onSubmit: async ({ value }) => {
-      console.log(value);
-      // navigate({ to: "/register/access-credential"})
+      const { success } = PersonalInfoSchema.safeParse(value);
+
+      if (success) {
+        return navigate({ to: "/register/access-credential", viewTransition: true });
+      }
     },
   });
 
