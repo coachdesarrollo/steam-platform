@@ -10,9 +10,11 @@ export const UsernameSchema = z
 export const PasswordSchema = z
   .string()
   .min(8, { message: "La contraseña debe tener al menos 8 caracteres" })
-  .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/, {
-    message:
-      "La contraseña debe contener al menos una letra minúscula, una letra mayúscula, un número y un carácter especial",
+  .regex(/^(?=.*[a-z])/, { message: "La contraseña debe contener al menos una letra minúscula" })
+  .regex(/^(?=.*[A-Z])/, { message: "La contraseña debe contener al menos una letra mayúscula" })
+  .regex(/^(?=.*\d)/, { message: "La contraseña debe contener al menos un número" })
+  .regex(/^(?=.*[!#$%&'()*+\,\-\./:;<=>?@[\]^_`{|}~@$!%*?&_-])/, {
+    message: "La contraseña debe contener al menos un carácter especial",
   });
 
 export const ProfileSchema = z

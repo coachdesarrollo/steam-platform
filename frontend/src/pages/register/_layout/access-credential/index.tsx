@@ -12,7 +12,7 @@ import {
 import { AccessCredential } from "./types";
 
 import { UserIcon } from "@/common/components/icons";
-import { BasicInput } from "@/common/components/inputs/basic";
+import { BasicInput } from "@/common/components/inputs";
 
 export const Route = createFileRoute("/register/_layout/access-credential/")({
   component: AccessCredential,
