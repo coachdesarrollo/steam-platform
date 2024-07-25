@@ -12,6 +12,7 @@ import {
 import { AccessCredential } from "./types";
 
 import { UserIcon } from "@/common/components/icons";
+import { BasicInput } from "@/common/components/inputs";
 
 export const Route = createFileRoute("/register/_layout/access-credential/")({
   component: AccessCredential,
@@ -62,18 +63,15 @@ function AccessCredential() {
           }}
         >
           {({ state, handleChange }) => (
-            <label className="grid gap-2" htmlFor="email">
-              <span className="text-white">Correo Electrónico *</span>
-              <input
-                className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
-                id="email"
-                name="email"
-                placeholder="Ingrese su correo electrónico"
-                type="email"
-                onChange={(e) => handleChange(e.currentTarget.value)}
-              />
-              {state.meta.errors && <p className="text-sm text-red-500">{state.meta.errors}</p>}
-            </label>
+            <BasicInput
+              isRequired
+              handleChange={handleChange}
+              label="Correo Electrónico"
+              name="email"
+              placeholder="Ingrese su correo electrónico"
+              state={state}
+              type="email"
+            />
           )}
         </Field>
         <Field
@@ -84,18 +82,14 @@ function AccessCredential() {
           }}
         >
           {({ state, handleChange }) => (
-            <label className="grid gap-2" htmlFor="username">
-              <span className="text-white">Nombre de usuario *</span>
-              <input
-                className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
-                id="username"
-                name="username"
-                placeholder="Defina su nombre de usuario"
-                type="text"
-                onChange={(e) => handleChange(e.currentTarget.value)}
-              />
-              {state.meta.errors && <p className="text-sm text-red-500">{state.meta.errors}</p>}
-            </label>
+            <BasicInput
+              isRequired
+              handleChange={handleChange}
+              label="Nombre de usuario"
+              name="username"
+              placeholder="Defina su nombre de usuario"
+              state={state}
+            />
           )}
         </Field>
         <Field
@@ -106,18 +100,15 @@ function AccessCredential() {
           }}
         >
           {({ state, handleChange }) => (
-            <label className="grid gap-2" htmlFor="password">
-              <span className="text-white">Contraseña *</span>
-              <input
-                className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
-                id="password"
-                name="password"
-                placeholder="Establezca una contraseña segura"
-                type="password"
-                onChange={(e) => handleChange(e.currentTarget.value)}
-              />
-              {state.meta.errors && <p className="text-sm text-red-500">{state.meta.errors}</p>}
-            </label>
+            <BasicInput
+              isRequired
+              handleChange={handleChange}
+              label="Contraseña"
+              name="password"
+              placeholder="Establezca una contraseña segura"
+              state={state}
+              type="password"
+            />
           )}
         </Field>
         <Field
@@ -128,18 +119,15 @@ function AccessCredential() {
           }}
         >
           {({ state, handleChange }) => (
-            <label className="grid gap-2" htmlFor="confirm-password">
-              <span className="text-white">Confirmar Contraseña *</span>
-              <input
-                className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
-                id="confirm-password"
-                name="confirmPassword"
-                placeholder="Repita la contraseña para continuar"
-                type="password"
-                onChange={(e) => handleChange(e.currentTarget.value)}
-              />
-              {state.meta.errors && <p className="text-sm text-red-500">{state.meta.errors}</p>}
-            </label>
+            <BasicInput
+              isRequired
+              handleChange={handleChange}
+              label="Confirmar Contraseña"
+              name="confirmPassword"
+              placeholder="Repita la contraseña para continuar"
+              state={state}
+              type="password"
+            />
           )}
         </Field>
         <Field
@@ -150,26 +138,22 @@ function AccessCredential() {
           }}
         >
           {({ state, handleChange }) => (
-            <label className="grid gap-2" htmlFor="photo">
-              <span className="text-white">Foto de perfil</span>
-              <div className="relative">
-                <input
-                  className="invisible absolute h-5 appearance-none rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
-                  id="photo"
-                  name="photo"
-                  placeholder="Repita la contraseña para continuar"
-                  type="file"
-                  onChange={(e) => handleChange(e.currentTarget.value)}
-                />
-                <div className="max-md:gap- flex items-center justify-start gap-3 rounded-md bg-[#333] px-3 py-5 text-white/40">
-                  <UserIcon className="w-10 justify-start max-md:w-8" />
-                  <span className="w-full text-pretty text-start text-lg font-semibold text-white/60 max-md:text-lg max-sm:text-sm">
-                    Sube o arrastra tu imagen de perfil
-                  </span>
-                </div>
+            <BasicInput
+              className="invisible absolute h-5 appearance-none"
+              handleChange={handleChange}
+              label="Foto de perfil"
+              name="photo"
+              state={state}
+              type="file"
+            >
+              <div className="max-md:gap- flex items-center justify-start gap-3 rounded-md bg-[#333] px-3 py-5 text-white/40">
+                <UserIcon className="w-10 justify-start max-md:w-8" />
+
+                <span className="w-full text-pretty text-start text-lg font-semibold text-white/60 max-md:text-lg max-sm:text-sm">
+                  Sube o arrastra tu imagen de perfil
+                </span>
               </div>
-              {state.meta.errors && <p className="text-sm text-red-500">{state.meta.errors}</p>}
-            </label>
+            </BasicInput>
           )}
         </Field>
       </main>
