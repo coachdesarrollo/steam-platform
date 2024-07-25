@@ -25,3 +25,7 @@ export { MailIcon } from "./mail.icon";
 
 export { TelephoneIcon } from "./telephone.icon";
 
+export { SearchIcon } from "./search.icon";
+
+export { BellIcon } from "./bell.icon";
+
