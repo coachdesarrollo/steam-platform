@@ -50,11 +50,13 @@ export function Button({
   color = ButtonColor.Gold,
   size = ButtonSize.Medium,
   className,
+  onClick,
 }: ButtonProps) {
   return (
     <button
       className={`${buttonStyles[variant][color]} rounded-md border-2 border-solid font-semibold transition duration-300 ${buttonSize[size]} ${className}`}
       type={type}
+      onClick={onClick}
     >
       {children}
     </button>
