@@ -14,6 +14,8 @@ import {
 } from "./schemas";
 import { PersonalInfo } from "./types";
 
+import { BasicInput } from "@/common/components/inputs";
+
 export const Route = createFileRoute("/register/_layout/personal-info/")({
   component: PersonalInfo,
 });
@@ -65,17 +67,14 @@ function PersonalInfo() {
           }}
         >
           {({ handleChange, state }) => (
-            <label className="grid gap-2" htmlFor="name">
-              <span className="text-white">Nombre *</span>
-              <input
-                className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
-                id="name"
-                placeholder="Ingrese su primer nombre"
-                type="text"
-                onChange={(e) => handleChange(e.currentTarget.value)}
-              />
-              {state.meta.errors && <p className="text-sm text-red-500">{state.meta.errors}</p>}
-            </label>
+            <BasicInput
+              isRequired
+              handleChange={handleChange}
+              label="Nombre"
+              name="name"
+              placeholder="Ingrese su primer nombre"
+              state={state}
+            />
           )}
         </Field>
         <Field
@@ -86,17 +85,14 @@ function PersonalInfo() {
           }}
         >
           {({ handleChange, state }) => (
-            <label className="grid gap-2" htmlFor="last-name">
-              <span className="text-white">Apellido *</span>
-              <input
-                className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
-                id="last-name"
-                placeholder="Ingrese su primer apellido"
-                type="text"
-                onChange={(e) => handleChange(e.currentTarget.value)}
-              />
-              {state.meta.errors && <p className="text-sm text-red-500">{state.meta.errors}</p>}
-            </label>
+            <BasicInput
+              isRequired
+              handleChange={handleChange}
+              label="Apellido"
+              name="lastName"
+              placeholder="Ingrese su primer apellido"
+              state={state}
+            />
           )}
         </Field>
 
@@ -108,19 +104,16 @@ function PersonalInfo() {
           }}
         >
           {({ handleChange, state }) => (
-            <label className="grid gap-2" htmlFor="phone">
-              <span className="text-white">Celular *</span>
-              <input
-                className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none marker:hidden"
-                id="phone"
-                name="phone"
-                placeholder="Digite su numero de celular"
-                size={10}
-                type="tel"
-                onChange={(e) => handleChange(e.currentTarget.value)}
-              />
-              {state.meta.errors && <p className="text-sm text-red-500">{state.meta.errors}</p>}
-            </label>
+            <BasicInput
+              isRequired
+              handleChange={handleChange}
+              label="Celular"
+              name="phone"
+              placeholder="Digite su numero de celular"
+              size={10}
+              state={state}
+              type="tel"
+            />
           )}
         </Field>
 
@@ -182,18 +175,15 @@ function PersonalInfo() {
           }}
         >
           {({ handleChange, state }) => (
-            <label className="grid gap-2" htmlFor="birthday">
-              <span className="text-white">Fecha de nacimiento *</span>
-              <input
-                className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
-                id="birthday"
-                name="birthday"
-                placeholder="DD / MM / AA"
-                type="date"
-                onChange={(e) => handleChange(e.currentTarget.value)}
-              />
-              {state.meta.errors && <p className="text-sm text-red-500">{state.meta.errors}</p>}
-            </label>
+            <BasicInput
+              isRequired
+              handleChange={handleChange}
+              label="Fecha de nacimiento"
+              name="birthday"
+              placeholder="DD / MM / AA"
+              state={state}
+              type="date"
+            />
           )}
         </Field>
         <Field
@@ -204,18 +194,14 @@ function PersonalInfo() {
           }}
         >
           {({ handleChange, state }) => (
-            <label className="grid gap-2" htmlFor="address">
-              <span className="text-white">Dirección</span>
-              <input
-                className="rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
-                id="address"
-                name="address"
-                placeholder="Ingrese su dirección de residencia"
-                type="text"
-                onChange={(e) => handleChange(e.currentTarget.value)}
-              />
-              {state.meta.errors && <p className="text-sm text-red-500">{state.meta.errors}</p>}
-            </label>
+            <BasicInput
+              isRequired
+              handleChange={handleChange}
+              label="Dirección"
+              name="address"
+              placeholder="Ingrese su dirección de residencia"
+              state={state}
+            />
           )}
         </Field>
       </main>
