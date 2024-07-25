@@ -11,6 +11,7 @@ import {
 } from "./schemas";
 import { AccessCredential } from "./types";
 
+import { Button } from "@/common/components/buttons";
 import { UserIcon } from "@/common/components/icons";
 import { BasicInput } from "@/common/components/inputs";
 
@@ -40,21 +41,21 @@ function AccessCredential() {
   });
 
   return (
-    <form
-      autoCapitalize="sentences"
-      autoComplete="off"
-      className="relative grid h-screen w-[480px] gap-6 bg-[#000000cd] px-12 py-8 pt-5 max-md:w-screen max-md:bg-[#0000007c]"
-      onSubmit={async (e) => {
-        e.preventDefault();
-        handleSubmit();
-      }}
-    >
+    <main className="relative grid w-[480px] bg-[#000000cd] px-12 py-8 pt-5 max-md:h-screen max-md:w-screen max-md:bg-[#0000007c]">
       <div className="grid w-full place-content-center">
         <span className="text-center text-sm text-white/50">2 de 5</span>
-        <h2 className="text-center text-4xl font-bold text-white max-md:text-3xl">Registrarse</h2>
+        <h2 className="text-center text-4xl font-bold text-white max-md:text-5xl">Registrarse</h2>
       </div>
 
-      <main className="grid gap-5 max-md:text-sm">
+      <form
+        autoCapitalize="sentences"
+        autoComplete="off"
+        className="grid gap-5 max-md:text-sm"
+        onSubmit={async (e) => {
+          e.preventDefault();
+          handleSubmit();
+        }}
+      >
         <Field
           name="email"
           validatorAdapter={zodValidator()}
@@ -156,21 +157,10 @@ function AccessCredential() {
             </BasicInput>
           )}
         </Field>
-      </main>
-      <button>Continuar</button>
-      {/* <Button
-        className="mt-6 h-16"
-        size={ButtonSize.Small}
-        theme={ButtonTheme.Gold}
-        variant={ButtonStyle.Outline}
-        onClick={() =>
-          navigate({
-            to: "/register/account-verification",
-          })
-        }
-      >
-        Continuar
-      </Button> */}
-    </form>
+        <Button className="h-fit w-fit justify-self-center" type="submit">
+          Continuar
+        </Button>
+      </form>
+    </main>
   );
 }

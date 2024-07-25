@@ -14,6 +14,7 @@ import {
 } from "./schemas";
 import { PersonalInfo } from "./types";
 
+import { Button } from "@/common/components/buttons";
 import { BasicInput } from "@/common/components/inputs";
 
 export const Route = createFileRoute("/register/_layout/personal-info/")({
@@ -44,21 +45,21 @@ function PersonalInfo() {
   });
 
   return (
-    <form
-      autoCapitalize="sentences"
-      autoComplete="off"
-      className="relative grid h-screen w-[480px] gap-5 bg-[#000000cd] px-10 py-8 pt-5 max-md:w-screen max-md:bg-[#0000007c]"
-      onSubmit={async (e) => {
-        e.preventDefault();
-        handleSubmit();
-      }}
-    >
-      <div className="grid w-full place-content-center">
+    <main className="grid w-[480px] gap-5 bg-[#000000cd] px-10 py-8 max-md:h-screen max-md:w-screen max-md:bg-[#0000007c]">
+      <header className="grid w-full place-content-center">
         <span className="text-center text-sm text-white/50">1 de 5</span>
         <h2 className="text-center text-4xl font-bold text-white max-md:text-3xl">Registrarse</h2>
-      </div>
+      </header>
 
-      <main className="grid gap-5 max-md:text-sm">
+      <form
+        autoCapitalize="sentences"
+        autoComplete="off"
+        className="grid gap-5 max-md:text-sm"
+        onSubmit={async (e) => {
+          e.preventDefault();
+          handleSubmit();
+        }}
+      >
         <Field
           name="name"
           validatorAdapter={zodValidator()}
@@ -204,18 +205,10 @@ function PersonalInfo() {
             />
           )}
         </Field>
-      </main>
-
-      {/* <Button
-        className="mt-5 h-16"
-        size={ButtonSize.Small}
-        theme={ButtonTheme.Gold}
-        variant={ButtonStyle.Outline}
-        onClick={() => navigate({ to: "/register/access-credential" })}
-      >
-        Continuar
-      </Button> */}
-      <button>Continuar</button>
-    </form>
+        <Button className="h-fit w-fit justify-self-center" type="submit">
+          Continuar
+        </Button>
+      </form>
+    </main>
   );
 }
