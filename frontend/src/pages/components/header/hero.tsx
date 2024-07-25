@@ -1,14 +1,14 @@
 import { useNavigate } from "@tanstack/react-router";
 
 import { Button } from "@/common/components/buttons";
-import { ButtonSize, ButtonStyle } from "@/common/config/themes/button";
+import { ButtonColor, ButtonSize, ButtonVariant } from "@/common/components/buttons/button";
 
 export function Hero() {
   const navigate = useNavigate();
 
   return (
     <article
-      className={`font-montserrat flex h-full animate-fade-out flex-col items-center justify-end px-8 pb-20 text-center text-white [animation-range:exit_-200px] [animation-timeline:view()]`}
+      className={`flex h-full animate-fade-out flex-col items-center justify-end px-8 pb-20 text-center font-montserrat text-white [animation-range:exit_-200px] [animation-timeline:view()]`}
     >
       <h1 className="mb-4 text-4xl font-extrabold sm:text-5xl">
         Cursos y recursos educativos variados para todos
@@ -21,9 +21,9 @@ export function Hero() {
         tu membresía de <b>STEAM</b>.
       </p>
       <Button
-        isLink={true}
+        color={ButtonColor.Light}
         size={ButtonSize.Large}
-        variant={ButtonStyle.Standard}
+        variant={ButtonVariant.Outline}
         onClick={() => navigate({ to: "/register/personal-info" })}
       >
         Registrarme

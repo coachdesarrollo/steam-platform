@@ -1,6 +1,6 @@
 import planDuo from "/assets/plan-duo.png";
-import planMono from "/assets/plan-mono.png";
 import planFamiliar from "/assets/plan-familiar.png";
+import planMono from "/assets/plan-mono.png";
 
 interface Subcription {
   name: string;
@@ -70,13 +70,11 @@ interface Goal {
 export const goals: Goal[] = [
   {
     statistics: "+100",
-    description:
-      "Cursos de Tecnología, Programación, Diseño, Marketing, Robotica...",
+    description: "Cursos de Tecnología, Programación, Diseño, Marketing, Robotica...",
   },
   {
     statistics: "+60",
-    description:
-      "Profesionales Dedicados están Aquí para Impulsar tu Éxito Educativo.",
+    description: "Profesionales Dedicados están Aquí para Impulsar tu Éxito Educativo.",
   },
   {
     statistics: "90%",

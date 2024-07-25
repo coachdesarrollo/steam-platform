@@ -1,7 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 
-import { Button } from "@/common/components/buttons";
-import { ButtonSize, ButtonStyle, ButtonTheme } from "@/common/config/themes/button";
+import { Button, ButtonColor, ButtonSize, ButtonVariant } from "@/common/components/buttons/button";
 
 export const Route = createFileRoute("/login/")({
   component: Login,
@@ -11,9 +10,11 @@ export function Login() {
   const navigate = useNavigate();
 
   return (
-    <main className="grid h-screen place-content-center bg-black/70 bg-banner-hero bg-cover bg-center bg-no-repeat bg-blend-multiply ">
-      <form className="grid gap-12 bg-black/60 px-12 py-8 max-sm:w-screen max-sm:min-h-screen max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center">
-        <h2 className="text-center text-4xl font-bold text-white max-sm:text-3xl">Iniciar Sesión</h2>
+    <main className="grid h-screen place-content-center bg-black/70 bg-banner-hero bg-cover bg-center bg-no-repeat bg-blend-multiply">
+      <form className="grid gap-12 bg-black/60 px-12 py-8 max-sm:flex max-sm:min-h-screen max-sm:w-screen max-sm:flex-col max-sm:items-center max-sm:justify-center">
+        <h2 className="text-center text-4xl font-bold text-white max-sm:text-3xl">
+          Iniciar Sesión
+        </h2>
 
         <main className="grid gap-5">
           <input
@@ -44,9 +45,9 @@ export function Login() {
           </div>
 
           <Button
+            color={ButtonColor.Gold}
             size={ButtonSize.Small}
-            theme={ButtonTheme.Gold}
-            variant={ButtonStyle.Standard}
+            variant={ButtonVariant.Standard}
             onClick={() =>
               navigate({
                 to: "/login/profile",
