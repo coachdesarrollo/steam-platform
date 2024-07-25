@@ -12,7 +12,7 @@ export function NavBar() {
                 <div className="hidden w-full md:block md:w-auto" id="navbar-multi-level">
                     <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 max-lg:text-sm">
                         <li>
-                        <a href="#" className="block py-2 px-3 text-white/90  md:bg-transparent md:p-0 hover:text-white hover:font-bold focus:border-b-2" aria-current="page">Home</a>
+                        <a href="#" className="block py-2 px-3 text-white/90  md:bg-transparent md:p-0 hover:text-white hover:font-bold focus:border-b-2" aria-current="page">Inicio</a>
                         </li>
                         <li>
                         <a href="#" className="block py-2 px-3 text-white/90  md:bg-transparent md:p-0 hover:text-white hover:font-bold focus:border-b-2" aria-current="page">Planes</a>
@@ -32,15 +32,21 @@ export function NavBar() {
             </section>
             {/* botones del lado derecho */}
             <section className="col-span-4 w-auto max-md:hidden flex items-center justify-end px-6 max-xl:px-9 max-lg:px-4">
-              <div className=" p-1 grid grid-flow-col justify-end gap-3">
-                <SearchIcon className="w-5 h-5 text-white/80" />
-                <BellIcon className="w-5 h-5 text-white/80" />
+              <div className=" p-1 grid grid-flow-col justify-end gap-4">
+                <button>
+                  <SearchIcon className="w-5 h-5 text-white/80 hover:text-white" />
+                </button>
+                <button>
+                  <BellIcon className="w-5 h-5 text-white/80 hover:text-white" />
+                </button>
+                
+                
               </div>
-              <hr className="bg-white/90 border w-6 rotate-90"/>
+              <hr className="bg-white/90 border w-6 rotate-90 max-lg:mr-1"/>
                     
               <div className="p-1 grid grid-flow-col justify-end gap-2 max-lg:gap-1">
-                <button className="bg-[#272727] w-fit text-sm max-lg:text-xs h-9 text-white/90 px-3 py-1 rounded-md">Iniciar sesión</button>
-                <button className="bg-[#272727] w-fit text-sm max-lg:text-xs h-9 text-white/90 px-3 py-1 rounded-md">Registrarse</button>
+                <button className="font-bold bg-white/90 w-fit text-sm max-lg:text-xs h-8 text-black px-3 py-1 rounded-md hover:bg-white hover:text-black/90" >Iniciar Sesión</button>
+                <button className="font-bold bg-transparent border border-white/90 w-fit text-sm max-lg:text-xs h-8 text-white/90 px-3 py-1 rounded-md hover:bg-white/90 hover:text-black" >Registrarse</button>
               </div>
                    
             </section>

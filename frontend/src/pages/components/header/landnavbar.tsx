@@ -4,7 +4,7 @@ import logoLarge from "/assets/imagotiposteamwhite.png";
 import logoTiny from "/assets/light-logo.png";
 
 import { Button } from "@/common/components/buttons";
-import { ButtonSize, ButtonVariant } from "@/common/components/buttons/button";
+import { ButtonColor, ButtonSize, ButtonVariant } from "@/common/components/buttons/button";
 
 export function LandNavBar() {
   const navigate = useNavigate();
@@ -19,7 +19,8 @@ export function LandNavBar() {
       </div>
       <Button
         size={ButtonSize.Small}
-        variant={ButtonVariant.Standard}
+        variant={ButtonVariant.Outline}
+        color={ButtonColor.Light}
         onClick={() => navigate({ to: "/login" })}
       >
         Iniciar Sesión
