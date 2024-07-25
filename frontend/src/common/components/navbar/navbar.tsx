@@ -2,8 +2,8 @@ import  lightlogo  from "/assets/light-logo.png"
 import { BellIcon, SearchIcon } from "../icons"
 export function NavBar() {
     return (
-        <nav className="bg-[#070707] grid grid-cols-10 justify-between items-center w-screen">
-            <section className="col-span-6 w-full flex flex-wrap items-center justify-start mx-auto p-4">
+        <nav className="bg-[#070707] flex justify-between px-2 max-lg:pr-5 items-center w-screen">
+            <section className="w-full flex flex-wrap items-center justify-start p-4 max-lg:pr-0">
                 <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse px-5">
                   <img src={lightlogo} className="h-9" alt="steam" />
                 </a>
@@ -31,7 +31,7 @@ export function NavBar() {
                 </div>    
             </section>
             {/* botones del lado derecho */}
-            <section className="col-span-4 w-auto max-md:hidden flex items-center justify-end px-6 max-xl:px-9 max-lg:px-4">
+            <section className="w-auto max-md:hidden flex items-center justify-end px-6 max-lg:px-0">
               <div className=" p-1 grid grid-flow-col justify-end gap-4">
                 <button>
                   <SearchIcon className="w-5 h-5 text-white/80 hover:text-white" />
@@ -42,11 +42,11 @@ export function NavBar() {
                 
                 
               </div>
-              <hr className="bg-white/90 border w-6 rotate-90 max-lg:mr-1"/>
+              <hr className="bg-white/90 border w-6 rotate-90 max-lg:-m-2"/>
                     
               <div className="p-1 grid grid-flow-col justify-end gap-2 max-lg:gap-1">
-                <button className="font-bold bg-white/90 w-fit text-sm max-lg:text-xs h-8 text-black px-3 py-1 rounded-md hover:bg-white hover:text-black/90" >Iniciar Sesión</button>
-                <button className="font-bold bg-transparent border border-white/90 w-fit text-sm max-lg:text-xs h-8 text-white/90 px-3 py-1 rounded-md hover:bg-white/90 hover:text-black" >Registrarse</button>
+                <button className="font-bold bg-white/90 w-32 max-lg:w-28 text-sm max-lg:text-xs h-8 text-black px-3 py-1 rounded-md hover:bg-white hover:text-black/90" >Iniciar Sesión</button>
+                <button className="font-bold bg-transparent border border-white/90 w-32 max-lg:w-28 text-sm max-lg:text-xs h-8 text-white/90 px-3 py-1 rounded-md hover:bg-white/90 hover:text-black" >Registrarse</button>
               </div>
                    
             </section>
