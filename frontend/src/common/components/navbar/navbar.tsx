@@ -6,24 +6,31 @@ import { useNavigate, Link } from "@tanstack/react-router";
 export function NavBar() {
   const navigate= useNavigate()
   const [isSearchVisible, setIsSearchVisible] = useState(false);
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
 
   const toggleSearch = () => {
     setIsSearchVisible(!isSearchVisible);
   };
+   
+  const toggleMenu = () => {
+    setIsMenuVisible(!isMenuVisible);
+  };
+
 
   return (
-    <nav className="bg-[#070707] flex justify-between px-2 max-lg:pr-5 items-center w-screen">
-      <section className="w-full flex flex-wrap items-center justify-start p-4 max-lg:pr-0">
-        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse px-5">
+    <nav className="fixed z-50 bg-[#070707] flex justify-between px-2 max-lg:px-5 items-center w-screen">
+      <section className="w-full flex flex-wrap items-center justify-start py-4 max-lg:pr-0">
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse px-5 max-lg:px-0 max-lg:pr-2">
           <img src={lightlogo} className="h-9" alt="steam" />
-        </a>
+        </Link>
 
-        {/* navbar options */}
-        <div className="hidden w-full md:block md:w-auto" id="navbar-multi-level">
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 max-lg:text-sm">
+        {/* navbar options */} 
+        {isMenuVisible && (
+          <div className="w-full md:block md:w-auto" id="navbar-multi-level">
+          <ul className="cursor-pointer flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 max-[1061px]:text-sm max-[764px]:w-fit max-[764px]:fixed max-[764px]:left-auto max-[764px]:right-0 max-[764px]:bg-black max-[764px]:h-screen">
             <li>
               <Link to="/">
-                <span className="block py-2 px-3 text-white/90  md:bg-transparent md:p-0 hover:text-white hover:font-bold focus:border-b-2" aria-current="page">Inicio</span>
+                <span className="block py-2 px-3 text-white/90  md:bg-transparent md:p-0 hover:text-white hover:font-bold focus:border-b-2 " aria-current="page">Inicio</span>
               </Link>
             </li>
             <li>
@@ -32,16 +39,16 @@ export function NavBar() {
               </Link>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-white/90  md:bg-transparent md:p-0 hover:text-white hover:font-bold focus:border-b-2" aria-current="page">Destacados</a>
+              <span className="block py-2 px-3 text-white/90  md:bg-transparent md:p-0 hover:text-white hover:font-bold focus:border-b-2" aria-current="page">Destacados</span>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-white/90  md:bg-transparent md:p-0 hover:text-white hover:font-bold focus:border-b-2" aria-current="page">Categorías</a>
+              <span className="block py-2 px-3 text-white/90  md:bg-transparent md:p-0 hover:text-white hover:font-bold focus:border-b-2" aria-current="page">Categorías</span>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-white/90  md:bg-transparent md:p-0 hover:text-white hover:font-bold focus:border-b-2" aria-current="page">Mi lista</a>
+              <span className="block py-2 px-3 text-white/90  md:bg-transparent md:p-0 hover:text-white hover:font-bold focus:border-b-2" aria-current="page">Mi lista</span>
             </li>
           </ul>
-        </div>
+        </div>)}
       </section>
       {/* botones del lado derecho */}
       <section className="w-auto max-md:hidden flex items-center justify-end px-6 max-lg:px-0">
@@ -49,7 +56,7 @@ export function NavBar() {
         <div className="flex items-center mx-2">
           {isSearchVisible && (
             <input
-              className="mx-2 p-1 rounded-md w-52 bg-[#00000051] border border-white/90 text-white/90"
+              className="mx-2 p-1 rounded-md w-52 bg-[#00000051] border border-white/90 text-white/90 max-[1185px]:w-32"
               type="text"
               placeholder="Buscar"
             />
@@ -72,7 +79,7 @@ export function NavBar() {
         </div>
       </section>
       {/* botón de hamburguesa para dispositivos pequeños */}
-      <button data-collapse-toggle="navbar-multi-level" type="button"
+      <button onClick={toggleMenu} data-collapse-toggle="navbar-multi-level" type="button"
         className="inline-flex flex-wrap items-center p-2 w-10 h-10 justify-center text-sm text-white/80 rounded-lg md:hidden hover:bg-[#272727] focus:outline-none focus:ring-1 focus:ring-gray-400"
         aria-controls="navbar-multi-level" aria-expanded="false">
         <span className="sr-only">Open main menu</span>

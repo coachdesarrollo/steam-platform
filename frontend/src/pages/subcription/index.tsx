@@ -1,11 +1,11 @@
 import { Button } from "@/common/components/buttons";
 import { CheckIcon } from "@/common/components/icons";
-import { ButtonSize, ButtonTheme } from "@/common/config/themes/button";
 import { goals, subcriptions } from "@/common/services/data";
 
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 
 import { Faq } from "../components/faq";
+import { NavBar } from "@common/components/navbar/navbar";
 
 import giftBox2 from "/assets/gift-box-party-2.png";
 import giftBox from "/assets/gift-box-party.png";
@@ -19,7 +19,8 @@ function Subcription() {
 
   return (
     <main className="grid gap-0 text-white">
-      <header className="grid gap-12 bg-black py-16 max-lg:px-12 lg:px-32">
+      <NavBar/>
+      <header className="grid gap-12 bg-[#070707] py-16 max-lg:px-12 lg:px-32">
         <h2 className="text-center text-5xl font-bold">Seleccionar Plan</h2>
 
         <section className="flex flex-wrap gap-5 max-md:gap-7">
@@ -70,9 +71,8 @@ function Subcription() {
         </p>
 
         <Button
-          className="w-max justify-self-center"
-          size={ButtonSize.Medium}
-          theme={ButtonTheme.Gold}
+          className="w-max mt-2 justify-self-center"
+
           onClick={() => navigate({ to: "/register/personal-info" })}
         >
           Registrarme ahora
@@ -81,7 +81,7 @@ function Subcription() {
 
       <hr className="border-2 border-[#333333]" />
 
-      <section className="grid w-full gap-16 bg-[#0E0E0E] py-32 max-lg:px-12 lg:px-32">
+      <section className="grid w-full gap-16 bg-[#0E0E0E] py-32 max-lg:px-5 max-lg:py-10 lg:px-32">
         <hgroup className="grid gap-6">
           <h2 className="text-center text-5xl font-bold">Alcanza tus objetivos</h2>
           <p className="w-[70%] justify-self-center text-center text-xl max-md:w-full">
@@ -91,7 +91,7 @@ function Subcription() {
           </p>
         </hgroup>
 
-        <article className="grid gap-12 max-sm:px-4 md:px-6 lg:grid-flow-col">
+        <article className="grid gap-12 max-sm:px-4 md:px-6 lg:grid-flow-col max-lg:gap-3">
           {goals.map((goal) => (
             <hgroup
               key={goal.description}
@@ -106,11 +106,11 @@ function Subcription() {
 
       <hr className="border-2 border-[#333333]" />
 
-      <section className="relative z-20 grid w-full place-content-center gap-14 p-8 py-32 max-sm:bg-[#070707]">
-        <div className="absolute bottom-0 right-0 -z-20">
+      <section className="relative z-20 grid w-full place-content-center gap-14 p-8 py-32 max-sm:bg-[#070707] max-lg:px-5 max-lg:py-20 ">
+        <div className="absolute bottom-0 right-0 -z-20 ">
           <img alt="gift box party" className="w-70 max-lg:w-56" src={giftBox} />
         </div>
-        <div className="absolute left-4 top-0 -z-10">
+        <div className="absolute left-4 top-0 -z-10 max-lg:-left-2">
           <img alt="gift box party" className="w-96 max-lg:w-64 max-sm:w-52" src={giftBox2} />
         </div>
         <hgroup className="grid gap-6 text-pretty text-center">
@@ -133,7 +133,7 @@ function Subcription() {
           </button>
         </div>
       </section>
-      <section className="h-auto border-y-2 border-[#333333] bg-[#0E0E0E]">
+      <section className="h-auto border-y-2 border-[#333333] bg-[#0E0E0E] max-lg:py-0">
         <Faq />
       </section>
     </main>
