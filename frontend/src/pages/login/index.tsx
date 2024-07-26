@@ -77,7 +77,7 @@ export function Login() {
           </Field>
 
           <div className="grid gap-4 font-light text-[#928F8F]">
-            <div className="flex items-center gap-16">
+            <div className="flex items-center justify-between gap-16">
               <label className="flex items-center gap-1.5 text-sm" htmlFor="reminder">
                 <input
                   className="grid h-5 w-5 appearance-none place-content-center rounded-sm border-2 border-white font-extrabold text-white transition-colors ease-in-out checked:bg-white checked:after:content-['✔']"
