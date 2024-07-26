@@ -38,7 +38,7 @@ export function BasicInput({
         className={`flex items-center justify-between rounded-md bg-[#333333] ${isError && "border-red-600"} border-2 border-solid border-transparent pr-2`}
       >
         <input
-          className={`rounded-md bg-inherit px-4 py-3 text-white outline-none ${className} ${isError && "text-red-600"} `}
+          className={`flex-1 rounded-md bg-inherit px-4 py-3 text-white outline-none ${className} ${isError && "text-red-600"} `}
           id={name}
           name={name}
           placeholder={placeholder}
