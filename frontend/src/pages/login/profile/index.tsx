@@ -61,6 +61,7 @@ function ProfilePage() {
   const updatePosition = (index: number) => {
     if (carouselRef.current) {
       const translateX = -index * itemWidth;
+
       // Eliminar transición para el ajuste instantáneo
       carouselRef.current.style.transition = "none";
       carouselRef.current.style.transform = `translateX(${translateX}px)`;
