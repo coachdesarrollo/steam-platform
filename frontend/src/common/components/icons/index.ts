@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 export { ArrowIcon } from "./arrow.icon";
 
 export { CheckIcon } from "./check.icon";
@@ -28,4 +27,8 @@ export { TelephoneIcon } from "./telephone.icon";
 export { SearchIcon } from "./search.icon";
 
 export { BellIcon } from "./bell.icon";
+
+export { InfoIcon } from "./info.icon";
+
+export { XIcon } from "./x.icon";
 

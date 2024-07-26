@@ -41,11 +41,11 @@ function AccessCredential() {
   });
 
   return (
-    <main className="relative grid w-[480px] bg-[#000000cd] px-12 py-8 pt-5 max-md:h-screen max-md:w-screen max-md:bg-[#0000007c]">
-      <div className="grid w-full place-content-center">
-        <span className="text-center text-sm text-white/50">2 de 5</span>
+    <main className="relative grid w-[480px] gap-5 bg-[#000000cd] px-12 py-8 pt-5 max-md:h-screen max-md:w-screen max-md:bg-[#0000007c]">
+      <hgroup className="grid w-full place-content-center">
+        <p className="text-center text-sm text-white/50">2 de 5</p>
         <h2 className="text-center text-4xl font-bold text-white max-md:text-5xl">Registrarse</h2>
-      </div>
+      </hgroup>
 
       <form
         autoCapitalize="sentences"

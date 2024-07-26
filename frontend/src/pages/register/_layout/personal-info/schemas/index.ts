@@ -1,29 +1,33 @@
 import { z } from "zod";
 
 export const UsernameSchema = z
-  .string({ message: "debe ser un string" })
-  .min(3, "Username must be at least 3 characters")
-  .max(12, "Username cannot be longer than 15 characters");
+  .string({ message: "Este campo es requerido" })
+  .min(3, "Minimo 3 caracteres")
+  .max(12, "Maximo 15 caracteres");
 
 export const LastnameSchema = z
-  .string({ message: "debe ser un string" })
-  .min(3, "Lastname must be at least 3 characters")
-  .max(10, "Lastname cannot be longer than 15 characters");
+  .string({ message: "Este campo es requerido" })
+  .min(3, "Minimo 3 caracteres")
+  .max(10, "Maximo 15 caracteres");
 
 export const PhoneSchema = z
-  .string({ required_error: "Phone is required" })
-  .regex(/^3(?!(\d)\1{3})[0-9]{9}$/, "Phone number is not valid");
+  .string({ required_error: "Este campo es requerido" })
+  .regex(/^3(?!(\d)\1{3})[0-9]{9}$/, "Numero no valido");
 
-export const ProvinceSchema = z.string().min(3, "Este campo es requerido");
+export const ProvinceSchema = z.string().min(3, "Provincia es requerido");
 
-export const TownSchema = z.string().min(3, "Este campo es requerido");
+export const TownSchema = z
+  .string({ message: "Este campo es requerido" })
+  .min(3, "Minimo 3 caracteres");
 
-export const BirhtdaySchema = z.string().date("Esta fecha no es valida");
+export const BirhtdaySchema = z
+  .string({ message: "Este campo es requerido" })
+  .date("Fecha invalida");
 
 export const AddressSchema = z
-  .string()
-  .min(3, "Username must be at least 3 characters")
-  .max(12, "Username cannot be longer than 15 characters");
+  .string({ message: "Este campo es requerido" })
+  .min(3, "Minimo 3 caracteres")
+  .max(12, "Maximo 12 caracteres");
 
 export const PersonalInfoSchema = z.object({
   name: UsernameSchema,
