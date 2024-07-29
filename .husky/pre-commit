@@ -1,0 +1,1 @@
+pnpm lint-staged && pnpm pretty-quick --staged && pnpm lint
