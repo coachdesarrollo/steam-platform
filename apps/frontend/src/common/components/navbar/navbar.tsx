@@ -2,14 +2,14 @@ import { useState } from "react";
 
 import lightlogo from "/assets/light-logo.png";
 
-import { useNavigate, Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 
-import { BellIcon, SearchIcon } from "../icons";
+import { BellIcon, BurgerIcon, SearchIcon } from "../icons";
 
 export function NavBar() {
   const navigate = useNavigate();
   const [isSearchVisible, setIsSearchVisible] = useState(false);
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [isMenuVisible, setIsMenuVisible] = useState(true);
 
   const toggleSearch = () => {
     setIsSearchVisible(!isSearchVisible);
@@ -32,7 +32,7 @@ export function NavBar() {
         {/* navbar options */}
         {isMenuVisible && (
           <div className="w-full md:block md:w-auto" id="navbar-multi-level">
-            <ul className="mt-4 flex cursor-pointer flex-col rounded-lg border p-4 font-medium max-[1061px]:text-sm max-[764px]:fixed max-[764px]:left-auto max-[764px]:right-0 max-[764px]:h-screen max-[764px]:w-fit max-[764px]:bg-black md:mt-0 md:flex-row md:space-x-4 md:border-0 md:p-0 rtl:space-x-reverse">
+            <ul className="mt-4 flex cursor-pointer flex-col rounded-lg border p-4 font-medium max-[1061px]:text-sm max-[764px]:fixed max-[764px]:left-auto max-[764px]:right-0 max-[764px]:h-screen max-[764px]:w-[40%] max-[764px]:items-center max-[764px]:gap-3 max-[764px]:rounded-none max-[764px]:border-none max-[764px]:bg-[#070707f6] max-[764px]:text-lg md:mt-0 md:flex-row md:space-x-4 md:border-0 md:p-0 rtl:space-x-reverse">
               <li>
                 <Link to="/">
                   <span
@@ -77,6 +77,7 @@ export function NavBar() {
                   Mi lista
                 </span>
               </li>
+              <li />
             </ul>
           </div>
         )}
@@ -87,7 +88,7 @@ export function NavBar() {
         <div className="mx-2 flex items-center">
           {isSearchVisible && (
             <input
-              className="mx-2 w-52 rounded-md border border-white/90 bg-[#00000051] p-1 text-white/90 max-[1185px]:w-32"
+              className="right-96 mx-2 w-52 rounded-md border border-white/90 bg-[#000000dc] p-1 text-white/90 shadow-md shadow-slate-500 max-[1185px]:absolute max-[1185px]:w-32 max-lg:right-72 max-lg:top-14"
               placeholder="Buscar"
               type="text"
             />
@@ -123,27 +124,13 @@ export function NavBar() {
       <button
         aria-controls="navbar-multi-level"
         aria-expanded="false"
-        className="inline-flex h-10 w-10 flex-wrap items-center justify-center rounded-lg p-2 text-sm text-white/80 hover:bg-[#272727] focus:outline-none focus:ring-1 focus:ring-gray-400 md:hidden"
+        className="inline-flex h-10 w-10 flex-wrap items-center justify-center rounded-lg p-2 text-sm text-white/80 hover:bg-[#1c1b1b] focus:outline-none focus:ring-1 focus:ring-gray-400 md:hidden"
         data-collapse-toggle="navbar-multi-level"
         type="button"
         onClick={toggleMenu}
       >
         <span className="sr-only">Open main menu</span>
-        <svg
-          aria-hidden="true"
-          className="h-5 w-5"
-          fill="none"
-          viewBox="0 0 17 14"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1 1h15M1 7h15M1 13h15"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-          />
-        </svg>
+        <BurgerIcon />
       </button>
     </nav>
   );
