@@ -5,6 +5,7 @@ import { goals, subcriptions } from "@/common/services/data";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 
 import { Faq } from "../components/faq";
+
 import { NavBar } from "@common/components/navbar/navbar";
 
 import giftBox2 from "/assets/gift-box-party-2.png";
@@ -19,7 +20,7 @@ function Subcription() {
 
   return (
     <main className="grid gap-0 text-white">
-      <NavBar/>
+      <NavBar />
       <header className="grid gap-12 bg-[#070707] py-16 max-lg:px-12 lg:px-32">
         <h2 className="text-center text-5xl font-bold">Seleccionar Plan</h2>
 
@@ -71,8 +72,7 @@ function Subcription() {
         </p>
 
         <Button
-          className="w-max mt-2 justify-self-center"
-
+          className="mt-2 w-max justify-self-center"
           onClick={() => navigate({ to: "/register/personal-info" })}
         >
           Registrarme ahora
@@ -91,13 +91,15 @@ function Subcription() {
           </p>
         </hgroup>
 
-        <article className="grid gap-12 max-sm:px-4 md:px-6 lg:grid-flow-col max-lg:gap-3">
+        <article className="grid gap-12 max-lg:gap-3 max-sm:px-4 md:px-6 lg:grid-flow-col">
           {goals.map((goal) => (
             <hgroup
               key={goal.description}
               className="grid gap-2 text-center max-lg:px-20 max-sm:px-0"
             >
-              <h3 className="text-pretty text-6xl font-poppins font-bold italic text-[#F7DF1E]">{goal.statistics}</h3>
+              <h3 className="text-pretty font-poppins text-6xl font-bold italic text-[#F7DF1E]">
+                {goal.statistics}
+              </h3>
               <p>{goal.description}</p>
             </hgroup>
           ))}
@@ -106,8 +108,8 @@ function Subcription() {
 
       <hr className="border-2 border-[#333333]" />
 
-      <section className="relative z-20 grid w-full place-content-center gap-14 p-8 py-32 max-sm:bg-[#070707] max-lg:px-5 max-lg:py-20 ">
-        <div className="absolute bottom-0 right-0 -z-20 ">
+      <section className="relative z-20 grid w-full place-content-center gap-14 p-8 py-32 max-lg:px-5 max-lg:py-20 max-sm:bg-[#070707]">
+        <div className="absolute bottom-0 right-0 -z-20">
           <img alt="gift box party" className="w-70 max-lg:w-56" src={giftBox} />
         </div>
         <div className="absolute left-4 top-0 -z-10 max-lg:-left-2">

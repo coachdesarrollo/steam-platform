@@ -3,10 +3,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily:{
-        'sans': ['Inter', 'sans-serif'], //global-font
-        'montserrat': ['Montserrat'],
-        'poppins': ['Poppins'],
+      fontFamily: {
+        sans: ["Inter", "sans-serif"], //global-font
+        montserrat: ["Montserrat"],
+        poppins: ["Poppins"],
       },
       backgroundImage: {
         "banner-hero": "url('/assets/banner-hero.png')",

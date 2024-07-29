@@ -31,4 +31,3 @@ export { BellIcon } from "./bell.icon";
 export { InfoIcon } from "./info.icon";
 
 export { XIcon } from "./x.icon";
-

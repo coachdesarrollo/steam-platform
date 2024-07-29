@@ -18,9 +18,9 @@ export function LandNavBar() {
         <img alt="SteamAcademy" className="block h-10 max-w-xs sm:hidden" src={logoTiny} />
       </div>
       <Button
+        color={ButtonColor.Light}
         size={ButtonSize.Small}
         variant={ButtonVariant.Outline}
-        color={ButtonColor.Light}
         onClick={() => navigate({ to: "/login" })}
       >
         Iniciar Sesión

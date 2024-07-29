@@ -10,6 +10,15 @@ import tseslint from "typescript-eslint";
 export default [
   // Ignores configuration
   {
+    files: ["**/*.js", "**/*.cjs", "**/*.mjs"],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.serviceworker,
+      },
+    },
+  },
+  {
     ignores: ["node_modules", "dist", "coverage", ".idea"],
   },
   // General configuration
