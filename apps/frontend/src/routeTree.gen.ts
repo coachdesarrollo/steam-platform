@@ -13,16 +13,16 @@ import { createFileRoute } from "@tanstack/react-router";
 // Import Routes
 
 import { Route as rootRoute } from "./pages/@__root";
-import { Route as RegisterLayoutImport } from "./pages/@register/@_layout";
-import { Route as SubcriptionIndexImport } from "./pages/@subcription/@index";
-import { Route as RegisterIndexImport } from "./pages/@register/@index";
-import { Route as LoginIndexImport } from "./pages/@login/@index";
 import { Route as HomeIndexImport } from "./pages/@home/@index";
+import { Route as LoginIndexImport } from "./pages/@login/@index";
 import { Route as LoginProfileIndexImport } from "./pages/@login/@profile/@index";
-import { Route as RegisterLayoutPersonalInfoIndexImport } from "./pages/@register/@_layout/@personal-info/@index";
-import { Route as RegisterLayoutPaymentSelectionIndexImport } from "./pages/@register/@_layout/@payment-selection/@index";
-import { Route as RegisterLayoutAccountVerificationIndexImport } from "./pages/@register/@_layout/@account-verification/@index";
+import { Route as RegisterLayoutImport } from "./pages/@register/@_layout";
 import { Route as RegisterLayoutAccessCredentialIndexImport } from "./pages/@register/@_layout/@access-credential/@index";
+import { Route as RegisterLayoutAccountVerificationIndexImport } from "./pages/@register/@_layout/@account-verification/@index";
+import { Route as RegisterLayoutPaymentSelectionIndexImport } from "./pages/@register/@_layout/@payment-selection/@index";
+import { Route as RegisterLayoutPersonalInfoIndexImport } from "./pages/@register/@_layout/@personal-info/@index";
+import { Route as RegisterIndexImport } from "./pages/@register/@index";
+import { Route as SubcriptionIndexImport } from "./pages/@subcription/@index";
 
 // Create Virtual Routes
 
