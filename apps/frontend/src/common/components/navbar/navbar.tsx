@@ -24,7 +24,7 @@ export function NavBar() {
       <section className="flex w-full flex-wrap items-center justify-start py-4 max-lg:pr-0">
         <Link
           className="flex items-center space-x-3 px-5 max-lg:px-0 max-lg:pr-2 rtl:space-x-reverse"
-          to="/"
+          to="/home"
         >
           <img alt="steam" className="h-9" src={lightlogo} />
         </Link>
@@ -34,7 +34,7 @@ export function NavBar() {
           <div className="w-full md:block md:w-auto" id="navbar-multi-level">
             <ul className="mt-4 flex cursor-pointer flex-col rounded-lg border p-4 font-medium max-[1061px]:text-sm max-[764px]:fixed max-[764px]:left-auto max-[764px]:right-0 max-[764px]:h-screen max-[764px]:w-[40%] max-[764px]:items-center max-[764px]:gap-3 max-[764px]:rounded-none max-[764px]:border-none max-[764px]:bg-[#070707f6] max-[764px]:text-lg md:mt-0 md:flex-row md:space-x-4 md:border-0 md:p-0 rtl:space-x-reverse">
               <li>
-                <Link to="/">
+                <Link to="/home">
                   <span
                     aria-current="page"
                     className="block px-3 py-2 text-white/90 hover:font-bold hover:text-white focus:border-b-2 md:bg-transparent md:p-0"
@@ -88,7 +88,7 @@ export function NavBar() {
         <div className="mx-2 flex items-center">
           {isSearchVisible && (
             <input
-              className="right-96 mx-2 w-52 rounded-md border border-white/90 bg-[#000000dc] p-1 text-white/90 shadow-md shadow-slate-500 max-[1185px]:absolute max-[1185px]:w-32 max-lg:right-72 max-lg:top-14"
+              className="max-lg: right-96 mx-2 w-52 rounded-md border border-white/90 bg-[#000000dc] p-1 text-white/90 max-[1185px]:absolute max-[1185px]:w-32 max-lg:right-80"
               placeholder="Buscar"
               type="text"
             />

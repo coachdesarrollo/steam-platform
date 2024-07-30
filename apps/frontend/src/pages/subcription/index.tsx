@@ -1,15 +1,16 @@
-import { Button } from "@/common/components/buttons";
-import { CheckIcon } from "@/common/components/icons";
-import { goals, subcriptions } from "@/common/services/data";
-
+import { NavBar } from "@common/components/navbar/navbar";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 
 import { Faq } from "../components/faq";
 
-import { NavBar } from "@common/components/navbar/navbar";
+import { Button } from "@/common/components/buttons";
+import { CheckIcon } from "@/common/components/icons";
+import { goals, subcriptions } from "@/common/services/data";
 
 import giftBox2 from "/assets/gift-box-party-2.png";
 import giftBox from "/assets/gift-box-party.png";
+
+import { ButtonColor, ButtonVariant } from "@/common/components/buttons/button";
 
 export const Route = createFileRoute("/subcription/")({
   component: Subcription,
@@ -127,12 +128,20 @@ function Subcription() {
         </hgroup>
 
         <div className="grid place-content-center gap-2">
-          <button className="rounded-md border-2 border-white bg-[#3D3D3D] px-16 py-3 font-semibold">
+          <Button
+            className="hover h-fit bg-[#313030] text-base"
+            color={ButtonColor.Light}
+            variant={ButtonVariant.Outline}
+          >
             Regala plan Duo
-          </button>
-          <button className="rounded-md border-2 border-white py-3 font-semibold">
-            Regala plan familiar
-          </button>
+          </Button>
+          <Button
+            className="hover h-fit text-base"
+            color={ButtonColor.Light}
+            variant={ButtonVariant.Outline}
+          >
+            Regala plan Familiar
+          </Button>
         </div>
       </section>
       <section className="h-auto border-y-2 border-[#333333] bg-[#0E0E0E] max-lg:py-0">
