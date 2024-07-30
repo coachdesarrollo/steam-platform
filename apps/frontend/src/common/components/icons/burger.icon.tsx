@@ -3,10 +3,7 @@ export type BurgerIconProps = {
   className?: string;
 };
 
-export function BurgerIcon({
-  className,
-  fill = "currentColor",
-}: BurgerIconProps) {
+export function BurgerIcon({ className, fill = "currentColor" }: BurgerIconProps) {
   return (
     <svg
       aria-hidden="true"

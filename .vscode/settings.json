@@ -5,5 +5,12 @@
     "source.addMissingImports.ts": "always",
     "source.removeUnusedImports": "always"
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "prettier.printWidth": 100,
+  "prettier.trailingComma": "all",
+  "prettier.tabWidth": 2,
+  "prettier.semi": true,
+  "prettier.singleQuote": false,
+  "prettier.endOfLine": "auto"
 }
