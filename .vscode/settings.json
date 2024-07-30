@@ -12,5 +12,6 @@
   "prettier.tabWidth": 2,
   "prettier.semi": true,
   "prettier.singleQuote": false,
-  "prettier.endOfLine": "auto"
+  "prettier.endOfLine": "auto",
+  "conventionalCommits.scopes": ["frontend", "backend"]
 }
