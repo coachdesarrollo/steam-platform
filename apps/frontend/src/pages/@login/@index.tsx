@@ -29,9 +29,9 @@ export function Login() {
   });
 
   return (
-    <main className="bg-black/70 grid h-screen place-content-center bg-banner-hero bg-cover bg-center bg-no-repeat bg-blend-multiply">
-      <section className="bg-black/60 grid w-[450px] gap-12 px-12 py-8 max-sm:flex max-sm:min-h-screen max-sm:w-screen max-sm:flex-col max-sm:items-center max-sm:justify-center">
-        <h2 className="text-white text-center text-4xl font-bold max-sm:text-3xl">
+    <main className="grid h-screen place-content-center bg-black/70 bg-banner-hero bg-cover bg-center bg-no-repeat bg-blend-multiply">
+      <section className="grid w-[450px] gap-12 bg-black/60 px-12 py-8 max-sm:flex max-sm:min-h-screen max-sm:w-screen max-sm:flex-col max-sm:items-center max-sm:justify-center">
+        <h2 className="text-center text-4xl font-bold text-white max-sm:text-3xl">
           Iniciar Sesión
         </h2>
 
@@ -80,7 +80,7 @@ export function Login() {
             <div className="flex items-center justify-between gap-16">
               <label className="flex items-center gap-1.5 text-sm" htmlFor="reminder">
                 <input
-                  className="border-white text-white checked:bg-white grid h-5 w-5 appearance-none place-content-center rounded-sm border-2 font-extrabold transition-colors ease-in-out checked:after:content-['✔']"
+                  className="grid h-5 w-5 appearance-none place-content-center rounded-sm border-2 border-white font-extrabold text-white transition-colors ease-in-out checked:bg-white checked:after:content-['✔']"
                   id="reminder"
                   type="checkbox"
                 />

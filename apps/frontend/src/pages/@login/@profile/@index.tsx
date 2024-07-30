@@ -12,7 +12,7 @@ const profiles = [
 
 // Componente para renderizar una tarjeta de perfil
 const ProfileCard = ({ name, img }: { name: string; img: string }) => (
-  <div className="bg-gray-600 m-2.5 box-border flex w-[200px] flex-none flex-col items-center rounded-xl bg-opacity-50 p-5">
+  <div className="m-2.5 box-border flex w-[200px] flex-none flex-col items-center rounded-xl bg-gray-600 bg-opacity-50 p-5">
     <img alt={`Perfil de ${name}`} className="mb-4 h-auto w-full rounded-full" src={img} />
     <h2 className="text-center text-2xl font-semibold">{name}</h2>
   </div>
@@ -95,12 +95,12 @@ function ProfilePage() {
   }, [currentIndex]);
 
   return (
-    <main className="bg-black grid h-screen place-content-center bg-opacity-70 bg-banner-hero bg-cover bg-center bg-no-repeat bg-blend-multiply">
-      <form className="bg-black grid gap-8 bg-opacity-60 px-12 py-8">
-        <h1 className="text-white text-center text-4xl font-bold">¿Quién eres? Elige tu perfil</h1>
+    <main className="grid h-screen place-content-center bg-black bg-opacity-70 bg-banner-hero bg-cover bg-center bg-no-repeat bg-blend-multiply">
+      <form className="grid gap-8 bg-black bg-opacity-60 px-12 py-8">
+        <h1 className="text-center text-4xl font-bold text-white">¿Quién eres? Elige tu perfil</h1>
         <div className="relative my-4 w-full max-w-[1000px] overflow-hidden">
           <button
-            className="bg-black text-white absolute left-0 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer bg-opacity-50 p-2 text-2xl"
+            className="absolute left-0 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer bg-black bg-opacity-50 p-2 text-2xl text-white"
             onClick={prevSlide}
           >
             &#10094;
@@ -118,7 +118,7 @@ function ProfilePage() {
               ))}
           </div>
           <button
-            className="bg-black text-white absolute right-0 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer bg-opacity-50 p-2 text-2xl"
+            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer bg-black bg-opacity-50 p-2 text-2xl text-white"
             onClick={nextSlide}
           >
             &#10095;

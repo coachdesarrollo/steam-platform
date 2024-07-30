@@ -43,8 +43,8 @@ function AccessCredential() {
   return (
     <main className="relative grid w-[480px] gap-5 bg-[#000000cd] px-12 py-8 pt-5 max-md:h-screen max-md:w-screen max-md:bg-[#0000007c]">
       <hgroup className="grid w-full place-content-center">
-        <p className="text-white/50 text-center text-sm">2 de 5</p>
-        <h2 className="text-white text-center text-4xl font-bold max-md:text-5xl">Registrarse</h2>
+        <p className="text-center text-sm text-white/50">2 de 5</p>
+        <h2 className="text-center text-4xl font-bold text-white max-md:text-5xl">Registrarse</h2>
       </hgroup>
 
       <form
@@ -147,10 +147,10 @@ function AccessCredential() {
               state={state}
               type="file"
             >
-              <div className="max-md:gap- text-white/40 flex items-center justify-start gap-3 rounded-md bg-[#333] px-3 py-5">
+              <div className="max-md:gap- flex items-center justify-start gap-3 rounded-md bg-[#333] px-3 py-5 text-white/40">
                 <UserIcon className="w-10 justify-start max-md:w-8" />
 
-                <span className="text-white/60 w-full text-pretty text-start text-lg font-semibold max-md:text-lg max-sm:text-sm">
+                <span className="w-full text-pretty text-start text-lg font-semibold text-white/60 max-md:text-lg max-sm:text-sm">
                   Sube o arrastra tu imagen de perfil
                 </span>
               </div>
