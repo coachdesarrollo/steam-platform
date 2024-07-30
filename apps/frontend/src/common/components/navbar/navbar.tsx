@@ -37,7 +37,7 @@ export function NavBar() {
                 <Link to="/home">
                   <span
                     aria-current="page"
-                    className="text-white/90 hover:text-white md:bg-transparent block px-3 py-2 hover:font-bold focus:border-b-2 md:p-0"
+                    className="block px-3 py-2 text-white/90 hover:font-bold hover:text-white focus:border-b-2 md:bg-transparent md:p-0"
                   >
                     Inicio
                   </span>
@@ -47,7 +47,7 @@ export function NavBar() {
                 <Link to="/subcription">
                   <span
                     aria-current="page"
-                    className="text-white/90 hover:text-white md:bg-transparent block px-3 py-2 hover:font-bold focus:border-b-2 md:p-0"
+                    className="block px-3 py-2 text-white/90 hover:font-bold hover:text-white focus:border-b-2 md:bg-transparent md:p-0"
                   >
                     Planes
                   </span>
@@ -56,7 +56,7 @@ export function NavBar() {
               <li>
                 <span
                   aria-current="page"
-                  className="text-white/90 hover:text-white md:bg-transparent block px-3 py-2 hover:font-bold focus:border-b-2 md:p-0"
+                  className="block px-3 py-2 text-white/90 hover:font-bold hover:text-white focus:border-b-2 md:bg-transparent md:p-0"
                 >
                   Destacados
                 </span>
@@ -64,7 +64,7 @@ export function NavBar() {
               <li>
                 <span
                   aria-current="page"
-                  className="text-white/90 hover:text-white md:bg-transparent block px-3 py-2 hover:font-bold focus:border-b-2 md:p-0"
+                  className="block px-3 py-2 text-white/90 hover:font-bold hover:text-white focus:border-b-2 md:bg-transparent md:p-0"
                 >
                   Categorías
                 </span>
@@ -72,7 +72,7 @@ export function NavBar() {
               <li>
                 <span
                   aria-current="page"
-                  className="text-white/90 hover:text-white md:bg-transparent block px-3 py-2 hover:font-bold focus:border-b-2 md:p-0"
+                  className="block px-3 py-2 text-white/90 hover:font-bold hover:text-white focus:border-b-2 md:bg-transparent md:p-0"
                 >
                   Mi lista
                 </span>
@@ -88,32 +88,32 @@ export function NavBar() {
         <div className="mx-2 flex items-center">
           {isSearchVisible && (
             <input
-              className="max-lg: border-white/90 text-white/90 right-96 mx-2 w-52 rounded-md border bg-[#000000dc] p-1 max-[1185px]:absolute max-[1185px]:w-32 max-lg:right-80"
+              className="max-lg: right-96 mx-2 w-52 rounded-md border border-white/90 bg-[#000000dc] p-1 text-white/90 max-[1185px]:absolute max-[1185px]:w-32 max-lg:right-80"
               placeholder="Buscar"
               type="text"
             />
           )}
           <button onClick={toggleSearch}>
-            <SearchIcon className="text-white/80 hover:text-white h-5 w-5" />
+            <SearchIcon className="h-5 w-5 text-white/80 hover:text-white" />
           </button>
         </div>
 
         <div className="grid grid-flow-col justify-end gap-4 p-1">
           <button>
-            <BellIcon className="text-white/80 hover:text-white h-5 w-5" />
+            <BellIcon className="h-5 w-5 text-white/80 hover:text-white" />
           </button>
         </div>
-        <hr className="bg-white/90 w-6 rotate-90 border max-lg:-m-2" />
+        <hr className="w-6 rotate-90 border bg-white/90 max-lg:-m-2" />
         {/*  */}
         <div className="grid grid-flow-col justify-end gap-2 p-1 max-lg:gap-1">
           <button
-            className="bg-white/90 text-black hover:bg-white hover:text-black/90 h-8 w-32 rounded-md px-3 py-1 text-sm font-bold max-lg:w-28 max-lg:text-xs"
+            className="h-8 w-32 rounded-md bg-white/90 px-3 py-1 text-sm font-bold text-black hover:bg-white hover:text-black/90 max-lg:w-28 max-lg:text-xs"
             onClick={() => navigate({ to: "/login" })}
           >
             Iniciar Sesión
           </button>
           <button
-            className="border-white/90 bg-transparent text-white/90 hover:bg-white/90 hover:text-black h-8 w-32 rounded-md border px-3 py-1 text-sm font-bold max-lg:w-28 max-lg:text-xs"
+            className="h-8 w-32 rounded-md border border-white/90 bg-transparent px-3 py-1 text-sm font-bold text-white/90 hover:bg-white/90 hover:text-black max-lg:w-28 max-lg:text-xs"
             onClick={() => navigate({ to: "/register/personal-info" })}
           >
             Registrarse
@@ -124,7 +124,7 @@ export function NavBar() {
       <button
         aria-controls="navbar-multi-level"
         aria-expanded="false"
-        className="text-white/80 focus:ring-gray-400 inline-flex h-10 w-10 flex-wrap items-center justify-center rounded-lg p-2 text-sm hover:bg-[#1c1b1b] focus:outline-none focus:ring-1 md:hidden"
+        className="inline-flex h-10 w-10 flex-wrap items-center justify-center rounded-lg p-2 text-sm text-white/80 hover:bg-[#1c1b1b] focus:outline-none focus:ring-1 focus:ring-gray-400 md:hidden"
         data-collapse-toggle="navbar-multi-level"
         type="button"
         onClick={toggleMenu}

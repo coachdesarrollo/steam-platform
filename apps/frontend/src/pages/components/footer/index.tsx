@@ -11,9 +11,9 @@ import {
 
 export function Footer() {
   return (
-    <footer className="text-surface/75 bg-gray-500 dark:text-gray-400 text-center lg:text-left dark:bg-primary-black">
+    <footer className="text-surface/75 bg-gray-500 text-center lg:text-left dark:bg-primary-black dark:text-gray-400">
       <div //Footer title container
-        className="border-neutral-200 dark:border-white/10 flex items-center justify-center border-b-2 p-6 lg:justify-between"
+        className="flex items-center justify-center border-b-2 border-neutral-200 p-6 lg:justify-between dark:border-white/10"
       >
         <div className="me-12 hidden lg:block">
           <span>Encuéntranos en nuestras redes sociales:</span>
@@ -23,7 +23,7 @@ export function Footer() {
           className="flex justify-center"
         >
           <a //Facebook
-            className="hover:dark:text-gray-200 me-6 [&>svg]:h-4 [&>svg]:w-4"
+            className="me-6 hover:dark:text-gray-200 [&>svg]:h-4 [&>svg]:w-4"
             href="https://www.facebook.com/STEAMAcademy.co"
             rel="noreferrer"
             target="_blank"
@@ -32,7 +32,7 @@ export function Footer() {
           </a>
 
           <a //google
-            className="hover:dark:text-gray-200 me-6 [&>svg]:h-4 [&>svg]:w-4"
+            className="me-6 hover:dark:text-gray-200 [&>svg]:h-4 [&>svg]:w-4"
             href="https://mail.google.com/mail/u/0/#search/steamacademi%40gmail.com"
             rel="noreferrer"
             target="_blank"
@@ -40,7 +40,7 @@ export function Footer() {
             <GoogleIcon />
           </a>
           <a //insta
-            className="hover:dark:text-gray-200 me-6 [&>svg]:h-4 [&>svg]:w-4"
+            className="me-6 hover:dark:text-gray-200 [&>svg]:h-4 [&>svg]:w-4"
             href="https://www.instagram.com/steamacademy.co/"
             rel="noreferrer"
             target="_blank"
@@ -48,7 +48,7 @@ export function Footer() {
             <InstagramIcon />
           </a>
           <a //In
-            className="hover:dark:text-gray-200 me-6 [&>svg]:h-4 [&>svg]:w-4"
+            className="me-6 hover:dark:text-gray-200 [&>svg]:h-4 [&>svg]:w-4"
             href="https://co.linkedin.com/company/steamacademyco"
             rel="noreferrer"
             target="_blank"
@@ -73,13 +73,13 @@ export function Footer() {
               </span>
               Sobre la empresa
             </h6>
-            <p className="hover:dark:text-gray-200 mb-4">
+            <p className="mb-4 hover:dark:text-gray-200">
               <a href="https://www.steamacademy.com.co/" rel="noreferrer" target="_blank">
                 {" "}
                 Sobre STEAM{" "}
               </a>
             </p>
-            <p className="hover:dark:text-gray-200 mb-4">
+            <p className="mb-4 hover:dark:text-gray-200">
               <a
                 href="https://www.steamacademy.com.co/fundacionstem"
                 rel="noreferrer"
@@ -89,13 +89,13 @@ export function Footer() {
                 Fundación STEAM{" "}
               </a>
             </p>
-            <p className="hover:dark:text-gray-200 mb-4">
+            <p className="mb-4 hover:dark:text-gray-200">
               <a href="https://www.steamacademy.com.co/" rel="noreferrer" target="_blank">
                 {" "}
                 STEAM para empresas{" "}
               </a>
             </p>
-            <p className="hover:dark:text-gray-200 mb-4">
+            <p className="mb-4 hover:dark:text-gray-200">
               <a href="https://www.steamacademy.com.co/blog" rel="noreferrer" target="_blank">
                 {" "}
                 Blog{" "}
@@ -108,13 +108,13 @@ export function Footer() {
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
               Productos
             </h6>
-            <p className="hover:dark:text-gray-200 mb-4">
+            <p className="mb-4 hover:dark:text-gray-200">
               <a href="#!">Centro de ayuda</a>
             </p>
-            <p className="hover:dark:text-gray-200 mb-4">
+            <p className="mb-4 hover:dark:text-gray-200">
               <a href="#!">Empleo</a>
             </p>
-            <p className="hover:dark:text-gray-200 mb-4">
+            <p className="mb-4 hover:dark:text-gray-200">
               <a href="#!">Preferencias de cookies</a>
             </p>
           </div>
@@ -124,19 +124,19 @@ export function Footer() {
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
               Información
             </h6>
-            <p className="hover:dark:text-gray-200 mb-4">
+            <p className="mb-4 hover:dark:text-gray-200">
               <a href="#!">Tarjetas de regalo</a>
             </p>
-            <p className="hover:dark:text-gray-200 mb-4">
+            <p className="mb-4 hover:dark:text-gray-200">
               <a href="#!">Términos de uso</a>
             </p>
-            <p className="hover:dark:text-gray-200 mb-4">
+            <p className="mb-4 hover:dark:text-gray-200">
               <a href="#!">Información corporativa</a>
             </p>
-            <p className="hover:dark:text-gray-200 mb-4">
+            <p className="mb-4 hover:dark:text-gray-200">
               <a href="#!">Prensa</a>
             </p>
-            <p className="hover:dark:text-gray-200 mb-4">
+            <p className="mb-4 hover:dark:text-gray-200">
               <a href="#!">Privacidad</a>
             </p>
           </div>
@@ -147,7 +147,7 @@ export function Footer() {
               Contacto
             </h6>
             <a
-              className="hover:dark:text-gray-200 mb-4 flex items-center justify-center md:justify-start"
+              className="mb-4 flex items-center justify-center md:justify-start hover:dark:text-gray-200"
               href="#!"
             >
               <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">
@@ -157,7 +157,7 @@ export function Footer() {
               Colombia
             </a>
             <a
-              className="hover:dark:text-gray-200 mb-4 flex items-center justify-center md:justify-start"
+              className="mb-4 flex items-center justify-center md:justify-start hover:dark:text-gray-200"
               href="#!"
             >
               <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">
@@ -166,7 +166,7 @@ export function Footer() {
               steamacademi@gmail.com
             </a>
             <a
-              className="hover:dark:text-gray-200 mb-4 flex items-center justify-center md:justify-start"
+              className="mb-4 flex items-center justify-center md:justify-start hover:dark:text-gray-200"
               href="#!"
             >
               <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">
@@ -175,7 +175,7 @@ export function Footer() {
               +57 3006388207
             </a>
             <a
-              className="hover:text-gray-200 flex items-center justify-center md:justify-start"
+              className="flex items-center justify-center hover:text-gray-200 md:justify-start"
               href="#!"
             >
               <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">

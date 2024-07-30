@@ -2,11 +2,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    colors: {
-      "primary-black": "#070707",
-      gold: "#F7DF1E",
-    },
     extend: {
+      colors: {
+        "primary-black": "#070707",
+        gold: "#F7DF1E",
+      },
       fontFamily: {
         sans: ["Inter", "sans-serif"], //global-font
         montserrat: ["Montserrat"],
