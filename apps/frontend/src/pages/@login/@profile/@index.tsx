@@ -3,11 +3,11 @@ import { useEffect, useRef, useState } from "react";
 
 // Datos de perfiles que se mostrarán en el carrusel
 const profiles = [
-  { name: "Mauro", img: "https://via.placeholder.com/100" },
-  { name: "Stiven", img: "https://via.placeholder.com/100" },
+  { name: "Cesar", img: "https://via.placeholder.com/100" },
+  { name: "Carlos", img: "https://via.placeholder.com/100" },
+  { name: "Juan F", img: "https://via.placeholder.com/100" },
+  { name: "Juan S", img: "https://via.placeholder.com/100" },
   { name: "Angel", img: "https://via.placeholder.com/100" },
-  { name: "Victor", img: "https://via.placeholder.com/100" },
-  { name: "Samuel", img: "https://via.placeholder.com/100" },
 ];
 
 // Componente para renderizar una tarjeta de perfil

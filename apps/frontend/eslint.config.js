@@ -19,7 +19,7 @@ export default [
     },
   },
   {
-    ignores: ["node_modules", "dist", "coverage", ".idea"],
+    ignores: ["node_modules", "dist", "coverage", ".idea", "routeTree.gen.ts"],
   },
   // General configuration
   {
