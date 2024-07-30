@@ -3,5 +3,6 @@
   "generatedRouteTree": "./src/routeTree.gen.ts",
   "routeFileIgnorePattern": "components|types|services|utils|data|schemas",
   "routeFileIgnorePrefix": "-",
-  "quoteStyle": "single"
+  "quoteStyle": "single",
+  "routeFilePrefix": "@"
 }

@@ -12,17 +12,17 @@ import { createFileRoute } from "@tanstack/react-router";
 
 // Import Routes
 
-import { Route as rootRoute } from "./pages/__root";
-import { Route as SubcriptionIndexImport } from "./pages/subcription/index";
-import { Route as RegisterIndexImport } from "./pages/register/index";
-import { Route as LoginIndexImport } from "./pages/login/index";
-import { Route as HomeIndexImport } from "./pages/home/index";
-import { Route as RegisterLayoutImport } from "./pages/register/_layout";
-import { Route as LoginProfileIndexImport } from "./pages/login/profile/index";
-import { Route as RegisterLayoutPersonalInfoIndexImport } from "./pages/register/_layout/personal-info/index";
-import { Route as RegisterLayoutPaymentSelectionIndexImport } from "./pages/register/_layout/payment-selection/index";
-import { Route as RegisterLayoutAccountVerificationIndexImport } from "./pages/register/_layout/account-verification/index";
-import { Route as RegisterLayoutAccessCredentialIndexImport } from "./pages/register/_layout/access-credential/index";
+import { Route as rootRoute } from "./pages/@__root";
+import { Route as RegisterLayoutImport } from "./pages/@register/@_layout";
+import { Route as SubcriptionIndexImport } from "./pages/@subcription/@index";
+import { Route as RegisterIndexImport } from "./pages/@register/@index";
+import { Route as LoginIndexImport } from "./pages/@login/@index";
+import { Route as HomeIndexImport } from "./pages/@home/@index";
+import { Route as LoginProfileIndexImport } from "./pages/@login/@profile/@index";
+import { Route as RegisterLayoutPersonalInfoIndexImport } from "./pages/@register/@_layout/@personal-info/@index";
+import { Route as RegisterLayoutPaymentSelectionIndexImport } from "./pages/@register/@_layout/@payment-selection/@index";
+import { Route as RegisterLayoutAccountVerificationIndexImport } from "./pages/@register/@_layout/@account-verification/@index";
+import { Route as RegisterLayoutAccessCredentialIndexImport } from "./pages/@register/@_layout/@access-credential/@index";
 
 // Create Virtual Routes
 
@@ -39,7 +39,12 @@ const RegisterRoute = RegisterImport.update({
 const IndexLazyRoute = IndexLazyImport.update({
   path: "/",
   getParentRoute: () => rootRoute,
-} as any).lazy(() => import("./pages/index.lazy").then((d) => d.Route));
+} as any).lazy(() => import("./pages/@index.lazy").then((d) => d.Route));
+
+const RegisterLayoutRoute = RegisterLayoutImport.update({
+  id: "/_layout",
+  getParentRoute: () => RegisterRoute,
+} as any);
 
 const SubcriptionIndexRoute = SubcriptionIndexImport.update({
   path: "/subcription/",
@@ -47,8 +52,8 @@ const SubcriptionIndexRoute = SubcriptionIndexImport.update({
 } as any);
 
 const RegisterIndexRoute = RegisterIndexImport.update({
-  path: "/",
-  getParentRoute: () => RegisterRoute,
+  path: "/register/",
+  getParentRoute: () => rootRoute,
 } as any);
 
 const LoginIndexRoute = LoginIndexImport.update({
@@ -59,11 +64,6 @@ const LoginIndexRoute = LoginIndexImport.update({
 const HomeIndexRoute = HomeIndexImport.update({
   path: "/home/",
   getParentRoute: () => rootRoute,
-} as any);
-
-const RegisterLayoutRoute = RegisterLayoutImport.update({
-  id: "/_layout",
-  getParentRoute: () => RegisterRoute,
 } as any);
 
 const LoginProfileIndexRoute = LoginProfileIndexImport.update({
@@ -103,20 +103,6 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof IndexLazyImport;
       parentRoute: typeof rootRoute;
     };
-    "/register": {
-      id: "/register";
-      path: "/register";
-      fullPath: "/register";
-      preLoaderRoute: typeof RegisterImport;
-      parentRoute: typeof rootRoute;
-    };
-    "/register/_layout": {
-      id: "/register/_layout";
-      path: "/register";
-      fullPath: "/register";
-      preLoaderRoute: typeof RegisterLayoutImport;
-      parentRoute: typeof RegisterRoute;
-    };
     "/home/": {
       id: "/home/";
       path: "/home";
@@ -133,10 +119,10 @@ declare module "@tanstack/react-router" {
     };
     "/register/": {
       id: "/register/";
-      path: "/";
-      fullPath: "/register/";
+      path: "/register";
+      fullPath: "/register";
       preLoaderRoute: typeof RegisterIndexImport;
-      parentRoute: typeof RegisterImport;
+      parentRoute: typeof rootRoute;
     };
     "/subcription/": {
       id: "/subcription/";
@@ -144,6 +130,20 @@ declare module "@tanstack/react-router" {
       fullPath: "/subcription";
       preLoaderRoute: typeof SubcriptionIndexImport;
       parentRoute: typeof rootRoute;
+    };
+    "/register": {
+      id: "/register";
+      path: "/register";
+      fullPath: "/register";
+      preLoaderRoute: typeof RegisterImport;
+      parentRoute: typeof rootRoute;
+    };
+    "/register/_layout": {
+      id: "/register/_layout";
+      path: "/register";
+      fullPath: "/register";
+      preLoaderRoute: typeof RegisterLayoutImport;
+      parentRoute: typeof RegisterRoute;
     };
     "/login/profile/": {
       id: "/login/profile/";
@@ -187,6 +187,10 @@ declare module "@tanstack/react-router" {
 
 export const routeTree = rootRoute.addChildren({
   IndexLazyRoute,
+  HomeIndexRoute,
+  LoginIndexRoute,
+  RegisterIndexRoute,
+  SubcriptionIndexRoute,
   RegisterRoute: RegisterRoute.addChildren({
     RegisterLayoutRoute: RegisterLayoutRoute.addChildren({
       RegisterLayoutAccessCredentialIndexRoute,
@@ -194,11 +198,7 @@ export const routeTree = rootRoute.addChildren({
       RegisterLayoutPaymentSelectionIndexRoute,
       RegisterLayoutPersonalInfoIndexRoute,
     }),
-    RegisterIndexRoute,
   }),
-  HomeIndexRoute,
-  LoginIndexRoute,
-  SubcriptionIndexRoute,
   LoginProfileIndexRoute,
 });
 
@@ -208,28 +208,40 @@ export const routeTree = rootRoute.addChildren({
 {
   "routes": {
     "__root__": {
-      "filePath": "__root.tsx",
+      "filePath": "@__root.tsx",
       "children": [
         "/",
-        "/register",
         "/home/",
         "/login/",
+        "/register/",
         "/subcription/",
+        "/register",
         "/login/profile/"
       ]
     },
     "/": {
-      "filePath": "index.lazy.tsx"
+      "filePath": "@index.lazy.tsx"
+    },
+    "/home/": {
+      "filePath": "@home/@index.tsx"
+    },
+    "/login/": {
+      "filePath": "@login/@index.tsx"
+    },
+    "/register/": {
+      "filePath": "@register/@index.tsx"
+    },
+    "/subcription/": {
+      "filePath": "@subcription/@index.tsx"
     },
     "/register": {
-      "filePath": "register",
+      "filePath": "@register",
       "children": [
-        "/register/_layout",
-        "/register/"
+        "/register/_layout"
       ]
     },
     "/register/_layout": {
-      "filePath": "register/_layout.tsx",
+      "filePath": "@register/@_layout.tsx",
       "parent": "/register",
       "children": [
         "/register/_layout/access-credential/",
@@ -238,36 +250,23 @@ export const routeTree = rootRoute.addChildren({
         "/register/_layout/personal-info/"
       ]
     },
-    "/home/": {
-      "filePath": "home/index.tsx"
-    },
-    "/login/": {
-      "filePath": "login/index.tsx"
-    },
-    "/register/": {
-      "filePath": "register/index.tsx",
-      "parent": "/register"
-    },
-    "/subcription/": {
-      "filePath": "subcription/index.tsx"
-    },
     "/login/profile/": {
-      "filePath": "login/profile/index.tsx"
+      "filePath": "@login/@profile/@index.tsx"
     },
     "/register/_layout/access-credential/": {
-      "filePath": "register/_layout/access-credential/index.tsx",
+      "filePath": "@register/@_layout/@access-credential/@index.tsx",
       "parent": "/register/_layout"
     },
     "/register/_layout/account-verification/": {
-      "filePath": "register/_layout/account-verification/index.tsx",
+      "filePath": "@register/@_layout/@account-verification/@index.tsx",
       "parent": "/register/_layout"
     },
     "/register/_layout/payment-selection/": {
-      "filePath": "register/_layout/payment-selection/index.tsx",
+      "filePath": "@register/@_layout/@payment-selection/@index.tsx",
       "parent": "/register/_layout"
     },
     "/register/_layout/personal-info/": {
-      "filePath": "register/_layout/personal-info/index.tsx",
+      "filePath": "@register/@_layout/@personal-info/@index.tsx",
       "parent": "/register/_layout"
     }
   }

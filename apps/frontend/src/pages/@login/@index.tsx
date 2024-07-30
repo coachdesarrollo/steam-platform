@@ -2,8 +2,8 @@ import { useForm } from "@tanstack/react-form";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { zodValidator } from "@tanstack/zod-form-adapter";
 
-import { PasswordSchema } from "../register/_layout/access-credential/schemas";
-import { UsernameSchema } from "../register/_layout/personal-info/schemas";
+import { PasswordSchema } from "../@register/@_layout/@access-credential/schemas";
+import { UsernameSchema } from "../@register/@_layout/@personal-info/schemas";
 
 import { LoginFieldsSchema } from "./schemas";
 import { LoginFields } from "./types";
