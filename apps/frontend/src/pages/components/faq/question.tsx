@@ -16,7 +16,7 @@ export function Question({ answer, question }: QuestionProps) {
           <PlusIcon />
         </span>
       </summary>
-      <div className="text-pretty bg-[#3f3f3f] p-4 text-[clamp(1rem,3vw,1.2rem)] text-xl leading-10 text-white/80">
+      <div className="text-white/80 text-pretty bg-[#3f3f3f] p-4 text-[clamp(1rem,3vw,1.2rem)] text-xl leading-10">
         {answer}
       </div>
     </details>

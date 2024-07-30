@@ -8,7 +8,7 @@ export function Hero() {
 
   return (
     <article
-      className={`flex h-full animate-fade-out flex-col items-center justify-end px-8 pb-20 text-center font-montserrat text-white [animation-range:exit_-200px] [animation-timeline:view()]`}
+      className={`text-white flex h-full animate-fade-out flex-col items-center justify-end px-8 pb-20 text-center font-montserrat [animation-range:exit_-200px] [animation-timeline:view()]`}
     >
       <h1 className="mb-4 text-4xl font-extrabold sm:text-5xl">
         Cursos y recursos educativos variados para todos

@@ -10,7 +10,7 @@ export function LandNavBar() {
   const navigate = useNavigate();
 
   return (
-    <nav className="z-10 flex w-full items-center justify-between bg-transparent px-20 pt-0 text-white max-sm:px-8 sm:flex-row sm:px-14">
+    <nav className="bg-transparent text-white z-10 flex w-full items-center justify-between px-20 pt-0 max-sm:px-8 sm:flex-row sm:px-14">
       <div //
         className="mb-4 flex items-center justify-center space-x-4 sm:mb-0"
       >

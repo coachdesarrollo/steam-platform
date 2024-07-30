@@ -20,7 +20,7 @@ function Subcription() {
   const navigate = useNavigate();
 
   return (
-    <main className="grid gap-0 text-white">
+    <main className="text-white grid gap-0">
       <NavBar />
       <header className="grid gap-12 bg-[#070707] py-16 max-lg:px-12 lg:px-32">
         <h2 className="text-center text-5xl font-bold">Seleccionar Plan</h2>
@@ -29,11 +29,11 @@ function Subcription() {
           {subcriptions.map((subcription) => (
             <article
               key={subcription.name}
-              className={`group relative flex flex-1 basis-[300px] cursor-pointer flex-col gap-3 rounded-md border-2 border-transparent bg-[#1D1D1D] p-4 transition-transform hover:scale-105 hover:border-2 hover:border-white`}
+              className={`border-transparent hover:border-white group relative flex flex-1 basis-[300px] cursor-pointer flex-col gap-3 rounded-md border-2 bg-[#1D1D1D] p-4 transition-transform hover:scale-105 hover:border-2`}
             >
               <div className="grid flex-1 gap-1 text-center">
                 {subcription.morePopular && (
-                  <h2 className="absolute -top-4 left-0 w-full rounded-t-md bg-white py-0.5 font-bold italic text-black transition-all duration-200 [transform-origin:top] group-hover:opacity-0">
+                  <h2 className="bg-white text-black absolute -top-4 left-0 w-full rounded-t-md py-0.5 font-bold italic transition-all duration-200 [transform-origin:top] group-hover:opacity-0">
                     Mas popular
                   </h2>
                 )}

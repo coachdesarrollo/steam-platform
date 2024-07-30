@@ -47,8 +47,8 @@ function PersonalInfo() {
   return (
     <main className="grid w-[480px] gap-5 bg-[#000000cd] px-10 py-8 max-md:h-screen max-md:w-screen max-md:bg-[#0000007c]">
       <header className="grid w-full place-content-center">
-        <span className="text-center text-sm text-white/50">1 de 5</span>
-        <h2 className="text-center text-4xl font-bold text-white max-md:text-3xl">Registrarse</h2>
+        <span className="text-white/50 text-center text-sm">1 de 5</span>
+        <h2 className="text-white text-center text-4xl font-bold max-md:text-3xl">Registrarse</h2>
       </header>
 
       <form
@@ -130,7 +130,7 @@ function PersonalInfo() {
               <label className="grid flex-1 gap-2" htmlFor="province">
                 <span className="text-white">Region *</span>
                 <select
-                  className="appearance-none rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
+                  className="text-white appearance-none rounded-md bg-[#333333] px-4 py-3 outline-none"
                   id="province"
                   name="province"
                   onChange={(e) => handleChange(e.currentTarget.value)}
@@ -139,7 +139,7 @@ function PersonalInfo() {
 
                   <option value="atlántico">Atlántico</option>
                 </select>
-                {state.meta.errors && <p className="text-sm text-red-500">{state.meta.errors}</p>}
+                {state.meta.errors && <p className="text-red-500 text-sm">{state.meta.errors}</p>}
               </label>
             )}
           </Field>
@@ -154,7 +154,7 @@ function PersonalInfo() {
               <label className="grid flex-1 gap-2" htmlFor="town">
                 <span className="text-white">Municipio *</span>
                 <select
-                  className="appearance-none rounded-md bg-[#333333] px-4 py-3 text-white outline-none"
+                  className="text-white appearance-none rounded-md bg-[#333333] px-4 py-3 outline-none"
                   id="town"
                   name="town"
                   onChange={(e) => handleChange(e.currentTarget.value)}
@@ -162,7 +162,7 @@ function PersonalInfo() {
                   <option value="null">--------</option>
                   <option value="Barranquilla">B/quilla</option>
                 </select>
-                {state.meta.errors && <p className="text-sm text-red-500">{state.meta.errors}</p>}
+                {state.meta.errors && <p className="text-red-500 text-sm">{state.meta.errors}</p>}
               </label>
             )}
           </Field>

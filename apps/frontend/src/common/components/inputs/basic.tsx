@@ -28,17 +28,17 @@ export function BasicInput({
     <div className="grid gap-2">
       {label && (
         <label
-          className={`grid flex-1 gap-2 text-white ${isError && "text-red-600"}`}
+          className={`text-white grid flex-1 gap-2 ${isError && "text-red-600"}`}
           htmlFor={name}
         >
           {label} {isRequired && "*"}
         </label>
       )}
       <div
-        className={`flex items-center justify-between rounded-md bg-[#333333] ${isError && "border-red-600"} border-2 border-solid border-transparent pr-2`}
+        className={`flex items-center justify-between rounded-md bg-[#333333] ${isError && "border-red-600"} border-transparent border-2 border-solid pr-2`}
       >
         <input
-          className={`flex-1 rounded-md bg-inherit px-4 py-3 text-white outline-none ${className} ${isError && "text-red-600"} `}
+          className={`bg-inherit text-white flex-1 rounded-md px-4 py-3 outline-none ${className} ${isError && "text-red-600"} `}
           id={name}
           name={name}
           placeholder={placeholder}
