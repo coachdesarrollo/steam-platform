@@ -20,7 +20,7 @@ export function NavBar() {
   };
 
   return (
-    <nav className="fixed z-50 flex w-screen items-center justify-between bg-primary-black px-2 max-lg:px-5">
+    <nav className="fixed z-50 flex w-screen items-center justify-between bg-primary-black bg-transparent px-2 max-lg:px-5">
       <section className="flex w-full flex-wrap items-center justify-start py-4 max-lg:pr-0">
         <Link
           className="flex items-center space-x-3 px-5 max-lg:px-0 max-lg:pr-2 rtl:space-x-reverse"

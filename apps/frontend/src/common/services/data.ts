@@ -88,3 +88,15 @@ export const paymentTypes: string[] = [
   "PSE",
   "Código de regalo",
 ];
+interface Synopsis {
+  title: string;
+  description: string;
+}
+
+export const synopsis_group: Synopsis[] = [
+  {
+    title: "React Intensivo ",
+    description:
+      "Este curso intensivo de React te llevará de principiante a experto en cuatro semanas, con un enfoque en la creación de aplicaciones interactivas y componentes reutilizables a través de ejercicios prácticos y proyectos reales.",
+  },
+];

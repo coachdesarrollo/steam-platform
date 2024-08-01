@@ -1,5 +1,7 @@
-import { NavBar } from "@common/components/navbar/navbar";
+import { Footer } from "@common/components/footer";
 import { createFileRoute } from "@tanstack/react-router";
+
+import { Header } from "./@header";
 
 export const Route = createFileRoute("/home/")({
   component: () => Home(),
@@ -8,7 +10,8 @@ export const Route = createFileRoute("/home/")({
 export function Home() {
   return (
     <main>
-      <NavBar />
+      <Header />
+      <Footer />
     </main>
   );
 }
