@@ -33,3 +33,5 @@ export { InfoIcon } from "./info.icon";
 export { XIcon } from "./x.icon";
 
 export { BurgerIcon } from "./burger.icon";
+
+export { PlayIcon } from "./play.icon";
