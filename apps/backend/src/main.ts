@@ -2,7 +2,15 @@ import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
-async function bootstrap() {
+/**
+ * Bootstrap function to initialize and start the NestJS application.
+ *
+ * This function sets up the application with global pipes for validation,
+ * configures middleware, and starts the server to listen on port 3000.
+ * @async
+ * @function
+ */
+async function bootstrap(): Promise<void> {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(
     new ValidationPipe({

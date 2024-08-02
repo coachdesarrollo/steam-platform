@@ -4,6 +4,12 @@ import { UsersModule } from 'src/users/users.module';
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
 
+/**
+ * Authentication Module
+ *
+ * This module handles authentication-related functionality including JWT configuration, and provides the authentication service and controller.
+ * @module AuthModule
+ */
 @Module({
   imports: [
     JwtModule.register({

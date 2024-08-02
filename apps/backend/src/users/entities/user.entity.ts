@@ -13,6 +13,9 @@ import {
   MinLength,
 } from 'class-validator';
 
+/**
+ *
+ */
 @Schema({ timestamps: true, _id: true })
 export class User {
   @Prop({

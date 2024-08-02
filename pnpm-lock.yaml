@@ -102,6 +102,9 @@ importers:
       eslint-config-prettier:
         specifier: ^9.0.0
         version: 9.1.0(eslint@8.57.0)
+      eslint-plugin-jsdoc:
+        specifier: 48.11.0
+        version: 48.11.0(eslint@8.57.0)
       eslint-plugin-prettier:
         specifier: ^5.0.0
         version: 5.2.1(@types/eslint@9.6.0)(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(prettier@3.3.3)
@@ -685,6 +688,13 @@ packages:
         integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==,
       }
     engines: { node: ">=12" }
+
+  "@es-joy/jsdoccomment@0.46.0":
+    resolution:
+      {
+        integrity: sha512-C3Axuq1xd/9VqFZpW4YAzOx5O9q/LP46uIQy/iNDpHG3fmPa6TBtvfglMCs3RBiBxAIi0Go97r8+jvTt55XMyQ==,
+      }
+    engines: { node: ">=16" }
 
   "@esbuild/aix-ppc64@0.21.5":
     resolution:
@@ -2445,6 +2455,13 @@ packages:
         integrity: sha512-lYe4Gx7QT+MKGbDsA+Z+he/Wtef0BiwDOlK/XkBrdfsh9J/jPPXbX0tE9x9cl27Tmu5gg3QUbUrQYa/y+KOHPQ==,
       }
 
+  are-docs-informative@0.0.2:
+    resolution:
+      {
+        integrity: sha512-ixiS0nLNNG5jNQzgZJNoUpBKdo9yTYZMGJ+QgT2jmjR7G7+QHRCc4v6LQ3NgE7EBJq+o0ams3waJwkrlBom8Ig==,
+      }
+    engines: { node: ">=14" }
+
   are-we-there-yet@2.0.0:
     resolution:
       {
@@ -3029,6 +3046,13 @@ packages:
         integrity: sha512-SsxdiOf064DWoZLH799Ata6u7iV658A11PlWtZATDlXPpKGJnbJZ5Z24ybixAi+LUUqJ/GKowAejtC5GFUG7Tw==,
       }
     engines: { node: ">= 6" }
+
+  comment-parser@1.4.1:
+    resolution:
+      {
+        integrity: sha512-buhp5kePrmda3vhc5B9t7pUQXAb2Tnd0qgpkIhPhkHXxJpiPJ11H0ZEU0oBpJ2QztSbzG/ZxMj/CHsYJqRHmyg==,
+      }
+    engines: { node: ">= 12.0.0" }
 
   compare-func@2.0.0:
     resolution:
@@ -3695,6 +3719,15 @@ packages:
     peerDependenciesMeta:
       "@typescript-eslint/parser":
         optional: true
+
+  eslint-plugin-jsdoc@48.11.0:
+    resolution:
+      {
+        integrity: sha512-d12JHJDPNo7IFwTOAItCeJY1hcqoIxE0lHA8infQByLilQ9xkqrRa6laWCnsuCrf+8rUnvxXY1XuTbibRBNylA==,
+      }
+    engines: { node: ">=18" }
+    peerDependencies:
+      eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
 
   eslint-plugin-jsx-a11y@6.9.0:
     resolution:
@@ -5146,6 +5179,13 @@ packages:
       }
     hasBin: true
 
+  jsdoc-type-pratt-parser@4.0.0:
+    resolution:
+      {
+        integrity: sha512-YtOli5Cmzy3q4dP26GraSOeAhqecewG04hoO8DY56CH4KJ9Fvv5qKWUCCo3HZob7esJQHCv6/+bnTy72xZZaVQ==,
+      }
+    engines: { node: ">=12.0.0" }
+
   jsesc@2.5.2:
     resolution:
       {
@@ -6116,6 +6156,13 @@ packages:
       }
     engines: { node: ">=6" }
 
+  parse-imports@2.1.1:
+    resolution:
+      {
+        integrity: sha512-TDT4HqzUiTMO1wJRwg/t/hYk8Wdp3iF/ToMIlAoVQfL1Xs/sTxq1dKWSMjMbQmIarfWKymOyly40+zmPHXMqCA==,
+      }
+    engines: { node: ">= 18" }
+
   parse-json@5.2.0:
     resolution:
       {
@@ -6880,6 +6927,12 @@ packages:
       }
     engines: { node: ">=8" }
 
+  slashes@3.0.12:
+    resolution:
+      {
+        integrity: sha512-Q9VME8WyGkc7pJf6QEkj3wE+2CnvZMI+XJhwdTPR8Z/kWQRXi7boAWLDibRPyHRTUTPx5FaU7MsyrjI3yLB4HA==,
+      }
+
   slick-carousel@1.8.1:
     resolution:
       {
@@ -6925,6 +6978,24 @@ packages:
     resolution:
       {
         integrity: sha512-kvzhi7vqKTfkh0PZU+2D2PIllw2ymqJKujUcyPMd9Y75Nv4nPbGJZXNhxsgdQab2BmlDct1YnfQCguEvHr7VsQ==,
+      }
+
+  spdx-exceptions@2.5.0:
+    resolution:
+      {
+        integrity: sha512-PiU42r+xO4UbUS1buo3LPJkjlO7430Xn5SVAhdpzzsPHsjbYVflnnFdATgabnLude+Cqu25p6N+g2lw/PFsa4w==,
+      }
+
+  spdx-expression-parse@4.0.0:
+    resolution:
+      {
+        integrity: sha512-Clya5JIij/7C6bRR22+tnGXbc4VKlibKSVj2iHvVeX5iMW7s1SIQlqu699JkODJJIhh/pUu8L0/VLh8xflD+LQ==,
+      }
+
+  spdx-license-ids@3.0.18:
+    resolution:
+      {
+        integrity: sha512-xxRs31BqRYHwiMzudOrpSiHtZ8i/GeionCBDSilhYRj+9gIcI8wCZTlXZKu9vZIVqViP3dcp9qE5G6AlIaD+TQ==,
       }
 
   split2@4.2.0:
@@ -8349,6 +8420,12 @@ snapshots:
     dependencies:
       "@jridgewell/trace-mapping": 0.3.9
 
+  "@es-joy/jsdoccomment@0.46.0":
+    dependencies:
+      comment-parser: 1.4.1
+      esquery: 1.6.0
+      jsdoc-type-pratt-parser: 4.0.0
+
   "@esbuild/aix-ppc64@0.21.5":
     optional: true
 
@@ -9606,6 +9683,8 @@ snapshots:
 
   aproba@2.0.0: {}
 
+  are-docs-informative@0.0.2: {}
+
   are-we-there-yet@2.0.0:
     dependencies:
       delegates: 1.0.0
@@ -9991,6 +10070,8 @@ snapshots:
       esprima: 4.0.1
       has-own-prop: 2.0.0
       repeat-string: 1.6.1
+
+  comment-parser@1.4.1: {}
 
   compare-func@2.0.0:
     dependencies:
@@ -10452,6 +10533,23 @@ snapshots:
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
+      - supports-color
+
+  eslint-plugin-jsdoc@48.11.0(eslint@8.57.0):
+    dependencies:
+      "@es-joy/jsdoccomment": 0.46.0
+      are-docs-informative: 0.0.2
+      comment-parser: 1.4.1
+      debug: 4.3.6
+      escape-string-regexp: 4.0.0
+      eslint: 8.57.0
+      espree: 10.1.0
+      esquery: 1.6.0
+      parse-imports: 2.1.1
+      semver: 7.6.3
+      spdx-expression-parse: 4.0.0
+      synckit: 0.9.1
+    transitivePeerDependencies:
       - supports-color
 
   eslint-plugin-jsx-a11y@6.9.0(eslint@9.8.0):
@@ -11660,6 +11758,8 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
+  jsdoc-type-pratt-parser@4.0.0: {}
+
   jsesc@2.5.2: {}
 
   json-buffer@3.0.1: {}
@@ -12142,6 +12242,11 @@ snapshots:
     dependencies:
       callsites: 3.1.0
 
+  parse-imports@2.1.1:
+    dependencies:
+      es-module-lexer: 1.5.4
+      slashes: 3.0.12
+
   parse-json@5.2.0:
     dependencies:
       "@babel/code-frame": 7.24.7
@@ -12568,6 +12673,8 @@ snapshots:
 
   slash@3.0.0: {}
 
+  slashes@3.0.12: {}
+
   slick-carousel@1.8.1(jquery@3.7.1):
     dependencies:
       jquery: 3.7.1
@@ -12591,6 +12698,15 @@ snapshots:
   sparse-bitfield@3.0.3:
     dependencies:
       memory-pager: 1.5.0
+
+  spdx-exceptions@2.5.0: {}
+
+  spdx-expression-parse@4.0.0:
+    dependencies:
+      spdx-exceptions: 2.5.0
+      spdx-license-ids: 3.0.18
+
+  spdx-license-ids@3.0.18: {}
 
   split2@4.2.0: {}
 

@@ -3,6 +3,12 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 
+/**
+ * Main Application.
+ *
+ * This module imports and configures the main application modules including
+ * database connection using Mongoose
+ */
 @Module({
   imports: [
     MongooseModule.forRoot(
