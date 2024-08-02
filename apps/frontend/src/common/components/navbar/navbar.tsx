@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import lightlogo from "/assets/light-logo.png";
 
@@ -10,6 +10,7 @@ export function NavBar() {
   const navigate = useNavigate();
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleSearch = () => {
     setIsSearchVisible(!isSearchVisible);
@@ -19,8 +20,22 @@ export function NavBar() {
     setIsMenuVisible(!isMenuVisible);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 1);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="fixed z-50 flex w-screen items-center justify-between bg-primary-black bg-transparent px-2 max-lg:px-5">
+    <nav
+      className={`fixed z-50 flex w-screen items-center justify-between transition-colors duration-300 ease-in-out ${isScrolled ? "bg-primary-black" : "bg-transparent"} px-2 max-lg:px-5`}
+    >
       <section className="flex w-full flex-wrap items-center justify-start py-4 max-lg:pr-0">
         <Link
           className="flex items-center space-x-3 px-5 max-lg:px-0 max-lg:pr-2 rtl:space-x-reverse"

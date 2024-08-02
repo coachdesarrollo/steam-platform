@@ -28,20 +28,15 @@ export function Hero() {
             color={ButtonColor.Gold}
             size={ButtonSize.Small}
             variant={ButtonVariant.Standard}
-            onClick={() => navigate({ to: "/register/personal-info" })}
+            onClick={() => navigate({ to: "/" })}
           >
             <PlayIcon className="m-1 w-4" />
             Reproducir
           </Button>
-          <Button
-            className="flex items-center gap-2 border-none bg-[#a2a1a1c7] text-white/75 hover:bg-[#c1c1c1c7] max-sm:text-sm"
-            size={ButtonSize.Small}
-            variant={ButtonVariant.Standard}
-            onClick={() => navigate({ to: "/register/personal-info" })}
-          >
+          <button className="flex items-center gap-2 rounded-md border-none bg-[#a2a1a1c7] p-2 text-white/75 hover:bg-[#c1c1c1c7] max-sm:text-sm">
             <InfoIcon className="m-1 w-6" />
             Más información
-          </Button>
+          </button>
         </div>
       </div>
     </section>

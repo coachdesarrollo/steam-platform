@@ -1,5 +1,6 @@
 import { Footer } from "@common/components/footer";
 import { createFileRoute } from "@tanstack/react-router";
+//import ReactPlayer from "react-player";
 
 import { Header } from "./@header";
 
