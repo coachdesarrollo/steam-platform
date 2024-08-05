@@ -108,14 +108,17 @@ export function NavBar() {
               type="text"
             />
           )}
-          <button onClick={toggleSearch}>
-            <SearchIcon className="h-5 w-5 text-white/80 hover:text-white" />
+          <button
+            className="rounded-xl p-1 text-white/80 hover:bg-primary-black/10 hover:text-white"
+            onClick={toggleSearch}
+          >
+            <SearchIcon className="h-5 w-5" />
           </button>
         </div>
 
         <div className="grid grid-flow-col justify-end gap-4 p-1">
-          <button>
-            <BellIcon className="h-5 w-5 text-white/80 hover:text-white" />
+          <button className="rounded-xl p-1 text-white/80 hover:bg-primary-black/10 hover:text-white">
+            <BellIcon className="h-5 w-5" />
           </button>
         </div>
         <hr className="w-6 rotate-90 border bg-white/90 max-lg:-m-2" />
