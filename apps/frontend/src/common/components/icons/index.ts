@@ -35,3 +35,7 @@ export { XIcon } from "./x.icon";
 export { BurgerIcon } from "./burger.icon";
 
 export { PlayIcon } from "./play.icon";
+
+export { MuteIcon } from "./mute.icon";
+
+export { VolumeIcon } from "./volume.icon";

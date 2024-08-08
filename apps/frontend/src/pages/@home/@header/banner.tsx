@@ -2,17 +2,18 @@ import { useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import ReactPlayer from "react-player";
 
-import video from "../../../../public/assets/video.mp4";
+import video from "../../../../public/assets/30Segundos.mp4";
 
 import { Button } from "@/common/components/buttons";
 import { ButtonColor, ButtonSize, ButtonVariant } from "@/common/components/buttons/button";
-import { InfoIcon, PlayIcon } from "@/common/components/icons";
+import { InfoIcon, MuteIcon, PlayIcon, VolumeIcon } from "@/common/components/icons";
 import { synopsis_group } from "@/common/services/data";
 
 export function Banner() {
   const navigate = useNavigate();
   const [hide, setHide] = useState(false);
   const [playing, setPlaying] = useState(false);
+  const [muted, setMuted] = useState(false); // Estado para manejar el mute
 
   let timer: number;
 
@@ -28,6 +29,10 @@ export function Banner() {
     }, 4000);
 
     return () => clearTimeout(timer);
+  };
+  // Manejador de click para mutear/desmutear el video
+  const handleMuteToggle = () => {
+    setMuted((prevMuted) => !prevMuted);
   };
 
   return (
@@ -51,12 +56,23 @@ export function Banner() {
           },
         }}
         height="100%"
+        muted={muted}
         playing={playing}
         style={{ position: "absolute", top: 0, left: 0 }}
         url={video}
         width="100%"
       />
       <div className="z-10 space-y-8 px-4 py-10">
+        <button
+          className="absolute bottom-40 right-12 z-10 rounded-full border border-white/50 bg-white/20 p-3.5 hover:bg-white/35"
+          onClick={handleMuteToggle}
+        >
+          {muted ? (
+            <MuteIcon className="h-6 text-white" />
+          ) : (
+            <VolumeIcon className="h-6 text-white" />
+          )}
+        </button>
         {synopsis_group.map((synopsis) => (
           <hgroup
             key={synopsis.description}
